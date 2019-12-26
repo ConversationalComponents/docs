@@ -12,7 +12,7 @@ Welcome to Conversational Components's documentation!
 
    general/whatiscoco
    SDKs
-   
+   api
 
 Indices and tables
 ==================

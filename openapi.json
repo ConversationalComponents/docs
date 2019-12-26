@@ -1,0 +1,335 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Coco Conversational Components",
+    "description" : "Coco API to allow simple integration of conversational components into chatbots",
+    "contact" : {
+      "name" : "Chen Buskilla",
+      "email" : "chen@a-i.com"
+    },
+    "version" : "0.0.2"
+  },
+  "servers" : [ {
+    "url" : "https://marketplace.conversationalcomponents.com/api",
+    "description" : "Coco conversational components"
+  } ],
+  "paths" : {
+    "/exchange/{componentId}/{sessionId}" : {
+      "post" : {
+        "tags" : [ "runtime" ],
+        "summary" : "A single exchange with a component",
+        "description" : "Perform a single exchange with a component.\n* user_input is optional and means the component should initiate the flow. if user_input is included the component may respond to that.\n* context is optional and flows on each turn from the calling bot to the component in both directions to pass gathered information",
+        "operationId" : "exchange",
+        "parameters" : [ {
+          "name" : "componentId",
+          "in" : "path",
+          "description" : "Component ID as generated at CocoApp",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "sessionId",
+          "in" : "path",
+          "description" : "Sessions ID a random string consistent across the user session",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "description" : "contains user_input and context with variables relevant to function of the component",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ExchangeBody"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "successful exchange",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ExchangeResponse"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "bad url paramters"
+          },
+          "422" : {
+            "description" : "missing component variables"
+          }
+        }
+      }
+    },
+    "/config/{blueprintId}" : {
+      "get" : {
+        "tags" : [ "publish" ],
+        "description" : "Get a blueprint config - the default config of a component",
+        "parameters" : [ {
+          "name" : "blueprintId",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ConfigBody"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "publish" ],
+        "description" : "Publish a component customization based on a blueprint",
+        "parameters" : [ {
+          "name" : "blueprintId",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/listen/{sessionId}" : {
+      "post" : {
+        "tags" : [ "marketplace" ],
+        "parameters" : [ {
+          "name" : "sessionId",
+          "in" : "path",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "sucess"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "ExchangeBody" : {
+        "type" : "object",
+        "properties" : {
+          "user_input" : {
+            "type" : "string",
+            "example" : "hi"
+          },
+          "context" : {
+            "$ref" : "#/components/schemas/ContextBody"
+          }
+        }
+      },
+      "ExchangeResponse" : {
+        "type" : "object",
+        "properties" : {
+          "response" : {
+            "type" : "string",
+            "example" : "hi"
+          },
+          "updated_context" : {
+            "$ref" : "#/components/schemas/ContextBody"
+          },
+          "component_done" : {
+            "type" : "boolean",
+            "description" : "the component is done and control should go back to calling bot"
+          },
+          "component_failed" : {
+            "type" : "boolean",
+            "description" : "component failed to achieve the goal and control should go back to calling bot",
+            "example" : false
+          },
+          "out_of_context" : {
+            "type" : "boolean",
+            "description" : "this input is out of context for the component and should be handled by calling bot and then return to component to finish",
+            "example" : false
+          },
+          "live_agent" : {
+            "type" : "boolean",
+            "description" : "control should go to a live agent",
+            "example" : false
+          },
+          "confidence" : {
+            "type" : "number",
+            "description" : "component confidence in the response",
+            "example" : 0.5
+          }
+        }
+      },
+      "ContextBody" : {
+        "type" : "object",
+        "properties" : {
+          "user" : {
+            "$ref" : "#/components/schemas/User"
+          },
+          "userInfo" : {
+            "$ref" : "#/components/schemas/UserInfo"
+          },
+          "userBillingAddress" : {
+            "$ref" : "#/components/schemas/Address"
+          },
+          "userShippingAddress" : {
+            "$ref" : "#/components/schemas/Address"
+          },
+          "userHomeAddress" : {
+            "$ref" : "#/components/schemas/Address"
+          },
+          "userCurrentLocation" : {
+            "$ref" : "#/components/schemas/Address"
+          }
+        }
+      },
+      "User" : {
+        "type" : "object",
+        "properties" : {
+          "firstName" : {
+            "type" : "string",
+            "example" : "john"
+          },
+          "lastName" : {
+            "type" : "string",
+            "example" : "smith"
+          },
+          "title" : {
+            "type" : "string",
+            "example" : "mr"
+          }
+        },
+        "description" : "The bot user primary info"
+      },
+      "UserInfo" : {
+        "type" : "object",
+        "properties" : {
+          "email" : {
+            "type" : "string",
+            "example" : "john@smith.com"
+          },
+          "profession" : {
+            "type" : "string",
+            "example" : "engineer"
+          },
+          "gender" : {
+            "type" : "string"
+          },
+          "age" : {
+            "type" : "integer"
+          },
+          "birthday" : {
+            "type" : "string",
+            "description" : "https://en.wikipedia.org/wiki/ISO_8601"
+          }
+        },
+        "description" : "Additonal info about the bot user"
+      },
+      "Address" : {
+        "type" : "object",
+        "properties" : {
+          "country" : {
+            "type" : "string"
+          },
+          "city" : {
+            "type" : "string"
+          },
+          "street" : {
+            "type" : "string"
+          },
+          "zipcode" : {
+            "type" : "string"
+          }
+        },
+        "description" : "A generic address object"
+      },
+      "ConfigBody" : {
+        "required" : [ "blueprint_id" ],
+        "type" : "object",
+        "properties" : {
+          "blueprint_id" : {
+            "type" : "string"
+          },
+          "bot_name" : {
+            "type" : "string"
+          },
+          "personality" : {
+            "type" : "string"
+          },
+          "action_config" : {
+            "$ref" : "#/components/schemas/ActionConfig"
+          },
+          "qa_config" : {
+            "$ref" : "#/components/schemas/QAConfig"
+          },
+          "quiz_survey_config" : {
+            "$ref" : "#/components/schemas/QuizSurveyConfig"
+          }
+        }
+      },
+      "ActionConfig" : {
+        "type" : "object",
+        "additionalProperties" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "greet" : [ "hi, {user.firstName}", "hello, {user.firstName}" ]
+        }
+      },
+      "QAConfig" : {
+        "type" : "object"
+      },
+      "QuizSurveyConfig" : {
+        "type" : "object"
+      },
+      "inline_response_200" : {
+        "type" : "object",
+        "properties" : {
+          "component_id" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}
