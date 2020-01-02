@@ -1,0 +1,7 @@
+site_name: Conversational Components Docs 
+nav:
+  - Home: index.md
+  - API Spec: test_redoc.html
+  - SDKs: SDKs.md
+
+theme: material

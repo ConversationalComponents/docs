@@ -1,1 +1,1 @@
-sphinxcontrib-openapi
+mkdocs-material
