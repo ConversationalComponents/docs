@@ -1,10 +1,22 @@
 site_name: Conversational Components Docs 
 nav:
-  - Home: index.md
+  - Overview: index.md
   #- Tutorials:
   #    - How to integrate a component with RASA: tutorials/rasa.md
   - Video Tutorials: tutorials/videos.md
   - SDKs: SDKs.md
-  - API Spec: api.html
+  - ⬅️ API Spec: api.html
+  - ⬅️ Home: https://conversationalcomponents.com/
+  - ⬅️ Marketplace: https://marketplace.conversationalcomponents.com/
 
-theme: material
+repo_url: 'https://github.com/conversationalcomponents/docs'
+
+theme:
+  name: material
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/conversationalcomponents'
+    - type: 'facebook'
+      link: 'https://facebook.com/ConversationalComponents'
