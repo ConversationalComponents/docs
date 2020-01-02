@@ -1,0 +1,227 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+servers:
+# Added by API Auto Mocking Plugin
+  - description: Coco conversational components
+    url: https://marketplace.conversationalcomponents.com/api
+info:
+  description: Coco API to allow simple integration of conversational components into chatbots
+  version: "0.0.2"
+  title: Coco Conversational Components
+  contact:
+    name: Chen Buskilla
+    email: chen@a-i.com
+    
+paths:
+  '/exchange/{componentId}/{sessionId}':
+    post:
+      tags:
+        - runtime
+      summary: A single exchange with a component
+      operationId: exchange
+      description: |-
+        Perform a single exchange with a component.
+        * user_input is optional and means the component should initiate the flow. if user_input is included the component may respond to that.
+        * context is optional and flows on each turn from the calling bot to the component in both directions to pass gathered information
+      parameters:
+        - name: componentId
+          in: path
+          description: Component ID as generated at CocoApp
+          required: true
+          schema:
+            type: string
+        - name: sessionId
+          in: path
+          description: Sessions ID a random string consistent across the user session
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful exchange
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExchangeResponse'
+        '400':
+          description: bad url paramters
+        '422':
+          description: missing component variables
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExchangeBody'
+        description: contains user_input and context with variables relevant to function of the component
+  
+  '/config/{blueprintId}':
+    parameters:
+      - name: blueprintId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      description: Get a blueprint config - the default config of a component
+      tags: 
+      - publish
+      responses:
+       200:
+        description: "success"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfigBody'
+    post:
+      description: Publish a component customization based on a blueprint
+      tags: 
+      - publish
+      responses:
+        200:
+          description: "success"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  component_id:
+                    type: string
+          
+  '/listen/{sessionId}':
+    post:
+      tags:
+        - marketplace
+      parameters: 
+        - name: sessionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: "sucess"
+components:
+  schemas:
+    ExchangeBody:
+      type: object
+      properties:
+        user_input:
+          type: string
+          example: hi
+        context:
+          $ref: '#/components/schemas/ContextBody'
+    ExchangeResponse:
+      type: object
+      properties:
+        response:
+          type: string
+          example: hi
+        updated_context:
+          $ref: '#/components/schemas/ContextBody'
+        component_done:
+          type: boolean
+          description: the component is done and control should go back to calling bot
+        component_failed:
+          type: boolean
+          example: false
+          description: component failed to achieve the goal and control should go back to calling bot
+        out_of_context:
+          type: boolean
+          example: false
+          description: this input is out of context for the component and should be handled by calling bot and then return to component to finish
+        live_agent:
+          type: boolean
+          example: false
+          description: control should go to a live agent
+        confidence:
+          type: number
+          example: 0.5
+          description: component confidence in the response
+
+    ContextBody:
+      type: object
+      properties:
+        user:
+          $ref: '#/components/schemas/User'
+        userInfo:
+          $ref: '#/components/schemas/UserInfo'
+        userBillingAddress:
+          $ref: '#/components/schemas/Address'
+        userShippingAddress:
+          $ref: '#/components/schemas/Address'
+        userHomeAddress:
+          $ref: '#/components/schemas/Address'
+        userCurrentLocation:
+          $ref: '#/components/schemas/Address'
+    User:
+      type: object
+      description: The bot user primary info
+      properties:
+        firstName:
+          type: string
+          example: john
+        lastName:
+          type: string
+          example: smith
+        title:
+          type: string
+          example: mr
+    UserInfo:
+      type: object
+      description: Additonal info about the bot user
+      properties:
+        email:
+          type: string
+          example: john@smith.com
+        profession:
+          type: string
+          example: engineer
+        gender:
+          type: string
+        age:
+          type: integer
+        birthday:
+          type: string
+          description: https://en.wikipedia.org/wiki/ISO_8601
+    Address:
+      type: object
+      description: A generic address object
+      properties:
+        country:
+          type: string
+        city:
+          type: string
+        street:
+          type: string
+        zipcode:
+          type: string
+    ConfigBody:
+      type: object
+      required: 
+        - blueprint_id
+      properties:
+        blueprint_id:
+          type: string
+        bot_name:
+          type: string
+        personality:
+          type: string
+        action_config:
+          $ref: '#/components/schemas/ActionConfig'
+        qa_config:
+          $ref: '#/components/schemas/QAConfig'
+        quiz_survey_config:
+          $ref: '#/components/schemas/QuizSurveyConfig'
+    ActionConfig:
+      type: object
+      example: 
+        greet: ["hi, {user.firstName}", "hello, {user.firstName}"]
+      additionalProperties:
+        type: array
+        items:
+          type: string
+    QAConfig:
+      type: object
+    QuizSurveyConfig:
+      type: object
