@@ -5,6 +5,8 @@ nav:
   #    - How to integrate a component with RASA: tutorials/rasa.md
   - Video Tutorials: tutorials/videos.md
   - SDKs: SDKs.md
+  - Vendor Toolkits: connectors.md
+
   - ⬅️ API Spec: api.html
   - ⬅️ Home: https://conversationalcomponents.com/
   - ⬅️ Marketplace: https://marketplace.conversationalcomponents.com/
@@ -13,6 +15,9 @@ repo_url: 'https://github.com/conversationalcomponents/docs'
 
 theme:
   name: material
+
+markdown_extensions:
+  - codehilite
 
 extra:
   social:
