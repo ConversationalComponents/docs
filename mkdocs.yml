@@ -4,9 +4,11 @@ nav:
   #- Tutorials:
   #    - How to integrate a component with RASA: tutorials/rasa.md
   - Video Tutorials: tutorials/videos.md
-  - SDKs: SDKs.md
-  - Vendor Toolkits: connectors.md
-
+  - Chatbot Developers:
+    - SDKs: SDKs.md
+  - Component Authors:
+    - Vendor Toolkits: connectors.md
+    - Publishing guidelines: vendor-guidelines.md
   - API Spec: api.md
   - ⬅️ Home: https://conversationalcomponents.com/
   - ⬅️ Marketplace: https://marketplace.conversationalcomponents.com/
