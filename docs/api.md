@@ -1,3 +1,24 @@
 
-<redoc spec-url='/openapi.yaml'></redoc>
-<script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
+
+<script src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3/swagger-ui.css"/>
+        
+<div id="swagger-ui"></div> <!-- Div to hold the UI component -->
+<script>
+    window.onload = function () {
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+            url: "/openapi.yaml", //Location of Open API spec in the repo
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIBundle.SwaggerUIStandalonePreset
+            ],
+            plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+            ],
+        })
+        window.ui = ui
+    }
+</script>
