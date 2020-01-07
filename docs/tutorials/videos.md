@@ -1,6 +1,6 @@
 
 ## Introduction to the CoCo Marketplace
-An introduction to the Conversational Component Marketplace. Learn how to sign up and add a component to your bot!
+Introduction to the Conversational Component Marketplace. Learn how to sign up and add a component to your bot!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zH9Bi3Iol5E" frameborder="0" allowfullscreen></iframe>
 
