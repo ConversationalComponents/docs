@@ -3,7 +3,10 @@ nav:
   - Overview: index.md
   #- Tutorials:
   #    - How to integrate a component with RASA: tutorials/rasa.md
-  - Video Tutorials: tutorials/videos.md
+  - Video Tutorials: 
+    - Marketplace: tutorials/videos.md
+    - Developers: tutorials/developer_videos.md
+    - Authors: tutorials/authors_videos.md
   - Chatbot Developers:
     - SDKs: SDKs.md
   - Component Authors:
