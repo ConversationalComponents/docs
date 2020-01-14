@@ -15,7 +15,7 @@ For more on using components, check out the Basics - Your First Component Call s
 
 
  
-## For Component Authors
+## For Component Vendors
  
 If you’ve already built excellent components of your own, we make it simple for you to distribute and monetize it. Adding your component to CoCo's Marketplace offers you several benefits. You’ll get instant exposure to our growing user base, a search-engine-optimized profile page for your component, as well as features like user management and billing services. 
 For more on adding your component, visit our Adding & Managing components - Getting Started section or check out our Components Providers page.
