@@ -1,12 +1,12 @@
 site_name: Conversational Components Docs 
 nav:
   - Overview: index.md
-  #- Tutorials:
-  #    - How to integrate a component with RASA: tutorials/rasa.md
   - Video Tutorials: 
     - Marketplace: tutorials/videos.md
     - Bot Developers: tutorials/developer_videos.md
     - CoCo Vendors: tutorials/authors_videos.md
+  - Tutorials:
+      - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
   - Chatbot Developers:
     - SDKs: SDKs.md
   - Component Vendors:
