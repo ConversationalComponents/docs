@@ -1,11 +1,11 @@
-At the following toutorial we will build a Banking bot, using [Dialogflow](https://dialogflow.cloud.google.com/ "Dialogflow")
-banking prebuilt agent and [CoCo](http://conversationalcomponents.com/ "CoCo") Register component from the [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace").
-I will guide you thorough the whole process implementing [CoCo](http://conversationalcomponents.com/ "CoCo") register component.
+In the following tutorial we'll build a banking bot, using [Dialogflow](https://dialogflow.cloud.google.com/ "Dialogflow")
+banking prebuilt agent and [CoCo](http://conversationalcomponents.com/ "CoCo") the 'Register' component from the [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace").
+I'll guide you thorough the whole process, including the implementation of the [CoCo](http://conversationalcomponents.com/ "CoCo") 'Register' component.
 
 
 ## Setup Prebuilt Bot On Dialogflow:
-* Create Dialogflow account.
-* Go to the prebuild agents menu:
+* Create a Dialogflow account.
+* Go to the prebuilt agents menu:
 ![](./screenshots/use_a_component_with_dialogflow_external/1_choose_prebuilt_agents.png)
 * Choose banking agent:
 ![](./screenshots/use_a_component_with_dialogflow_external/2_choose_banking_bot.png)
@@ -33,8 +33,8 @@ Generate JSON key:
 ![](./screenshots/use_a_component_with_dialogflow_external/8_place_the_json_key_in_code_folder.png)
 
 ## Code Sample Overview:
-We will use a Flask application to expose our bot throut an API. For communication
-with Dialogflow we will use Dialogflow SDK and for communication with the CoCo component we will use CoCo SDK.
+We'll use a Flask application to expose our bot throut an API. For communication
+with Dialogflow we'll use Dialogflow SDK and for communication with the CoCo component we'll use CoCo SDK.
 
 **Code to code sample repository:**
 [https://github.com/ConversationalComponents/webinar/tree/master/py](https://github.com/ConversationalComponents/webinar/tree/master/py "Sample Repo")
@@ -51,9 +51,9 @@ MAIN_COMP = "default"
 current_comp = MAIN_COMP
 ```
 The current_comp global variable will be "default" when the
-conversation controled by Dialogflow.When the control will be passed to
-a CoCo component the valiue of the current_comp variable will be the
-CoCo component ID which is in control over the conversation right now.
+conversation is controlled by Dialogflow. When the control is passed to
+a CoCo component the value of the current_comp variable will be the
+CoCo component ID which is in control of the conversation right now.
 
 
 #### CoCo And Dialogflow Access Functions:
@@ -89,7 +89,7 @@ query_input=query_input)
 
 return response.query_result.intent.display_name, response.query_result.fulfillment_text
 ```
-The fucntion receives session_id and user input then returns intent display name
+The function receives the session_id and user input then returns intent display name
 and response text.
 
 And there is the process_coco function:
@@ -118,12 +118,12 @@ The answer will be the component output.
 #### /input Endpoint:
 At the our `app.py` file we will implement /input endpoint, which will receive
 `user_input` at the payload process the input and return bot response.(Will be
-implemented at the "mplement Component In Conversation Flow" topic.)
+implemented at the "implement Component In Conversation Flow" topic.)
 
 
 ## Choose And Add Component:
 * Access marketplace: [https://marketplace.conversationalcomponents.com/](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace")
-* Choose register component:
+* Choose the 'Register' component:
 
 ![](./screenshots/use_a_component_with_dialogflow_external/10_register_component.png)
 
@@ -149,7 +149,7 @@ Send user input to Dialogflow.
                                                  text=user_input)
 ```
 
-Choose an relevant intent which will trigger the control pass to a CoCo
+Choose a relevant intent which will trigger the control pass to a CoCo
 component:
 
 
@@ -170,7 +170,7 @@ The relevant intent for registration is "account.open".
 
 ```
 
-When component done, pass the conversation control back to Dialogflow:
+When component is done, pass the conversation control back to Dialogflow:
 
 ```python
         # If component done, return the control to the main flow.
