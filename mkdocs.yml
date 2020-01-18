@@ -7,6 +7,10 @@ nav:
     - CoCo Vendors: tutorials/authors_videos.md
   - Tutorials:
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
+  - Concepts:
+      - Goals and Subgoals in Conversation: concepts/goals.md
+      - Conversational Component: concepts/convcomp.md
+      - Context Transfer: concepts/context.md
   - Chatbot Developers:
     - SDKs: SDKs.md
   - Component Vendors:
