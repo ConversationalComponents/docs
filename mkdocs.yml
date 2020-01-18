@@ -8,6 +8,10 @@ nav:
   - Tutorials:
       - Calling a CoCo from Dialogflow(internally): tutorials/plug_coco_component_inside_dialogflow_conversation
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
+  - Concepts:
+      - Goals and Subgoals in Conversation: concepts/goals.md
+      - Conversational Component: concepts/convcomp.md
+      - Context Transfer: concepts/context.md
   - Chatbot Developers:
     - SDKs: SDKs.md
   - Component Vendors:
