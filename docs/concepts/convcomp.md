@@ -9,13 +9,13 @@ Every component needs to decide how to handle the conversation history it inheri
 
 ## Terminating a component
 Each component can signal the calling agent to stop calling it at any point.
-Usually it will send the signal along with information about the component's stated goal:
-1. component_done: The Component accomplished the stated goal
-2. component_failed: The Component **didn't** accomplish the stated goal
+Usually the component will send the signal along with information about the component's stated goal:
+1. component_done: The component accomplished the stated goal
+2. component_failed: The component **didn't** accomplish the stated goal
 
 ## Going out of context
 Sometimes when a user is talking to a component, he/she will ask questions which are outside the domain of the component (Out of Context)
-There are several options for this scenarion: one way to handle it is to relinquish control back to the calling agent for one turn (to answer the non-contextual question) and then resume control immediately after providing the relevant response.
+There are several options for this scenario: one way to handle it is to relinquish control back to the calling agent for one turn (to answer the non-contextual question) and then the component resumes control immediately after providing the relevant response from the calling agent.
 In CoCo this signal is called "out_of_context"
 
 
