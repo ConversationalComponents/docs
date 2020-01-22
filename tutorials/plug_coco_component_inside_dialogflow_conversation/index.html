@@ -522,6 +522,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
       
       
       
@@ -561,7 +568,7 @@ from the <a href="https://marketplace.conversationalcomponents.com/" title="CoCo
 <li>Add CoCo SDK To Package JSON:</li>
 </ul>
 <p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/3_add_coco_sdk_to_package_json.png" /></p>
-<p>Copy the line:</p>
+<p>Copy the line(don't forget the comma in the end of line above):</p>
 <div class="codehilite"><pre><span></span>    <span class="s2">&quot;@conversationalcomponents/dialogflow-sdk&quot;</span><span class="o">:</span> <span class="s2">&quot;^1.0.2&quot;</span>
 </pre></div>
 
@@ -601,9 +608,9 @@ Copy the line:</p>
 </pre></div>
 
 
-<p><strong>Notice</strong>: In order to be able to send requests to APIs from the fulfilment function,
+<p><strong>Notice</strong>: In order to be able to send external requests to APIs from the fulfilment function(in other words calling CoCo),
 you need to activate your Google firebase account. It will ask you for billing info.
-Also Google provides a substantial free quota for this service, so you won't actually be charged.</p>
+Google provides a substantial free quota for this service, so you won't actually be charged.</p>
 <h2 id="plug-component-to-your-conversation-flow">Plug Component To Your Conversation Flow.</h2>
 <ul>
 <li>Access <a href="https://marketplace.conversationalcomponents.com/" title="CoCo Marketplace">CoCo Marketplace</a> and choose the relevant component:</li>
@@ -622,12 +629,19 @@ Copy the line:</p>
 </pre></div>
 
 
+<p>Click on DEPLOY</p>
 <h3 id="check-your-bot">Check Your Bot:</h3>
 <p>In the image blow, you can see that we received an answer from the component
 when the correct intent triggered:</p>
 <p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/11_flow_test.png" /></p>
 <p>Also you'll notice a multi-turn conversation supplied by the component:</p>
 <p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/12_flow_test_2.png" /></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Getting the intent responses instead of the responses from the component:</li>
+</ul>
+<p>log in to firebase dashboard -&gt; functions -&gt; delete dialogFulfillmentFunction -&gt; click on the deploy button again in the fulfillment tab in Dialogflow.</p>
+<p><em>package.json and index.js might reset to the default code so repeat the steps from above</em></p>
                 
                   
                 
