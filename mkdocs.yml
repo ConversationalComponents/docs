@@ -6,6 +6,7 @@ nav:
     - Bot Developers: tutorials/developer_videos.md
     - CoCo Vendors: tutorials/authors_videos.md
   - Tutorials:
+      - Calling a CoCo from Dialogflow(internally): tutorials/plug_coco_component_inside_dialogflow_conversation
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
   - Chatbot Developers:
     - SDKs: SDKs.md
