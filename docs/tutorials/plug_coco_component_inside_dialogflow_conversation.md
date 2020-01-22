@@ -2,7 +2,7 @@
 
 In the following tutorial we'll implement [CoCo](http://conversationalcomponents.com/ "CoCo")
 component into our [Dialogflow](https://dialogflow.cloud.google.com/ "Dialogflow")
-conversation flow. When a component will be triggered when a relevant event matched.
+conversation flow.A component will be triggered when a relevant intent matched.
 More specific, we'll use [CoCo](http://conversationalcomponents.com/ "CoCo") [register component](https://marketplace.conversationalcomponents.com/blueprint/register_vp3 "register component")
 from the [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace").
 
