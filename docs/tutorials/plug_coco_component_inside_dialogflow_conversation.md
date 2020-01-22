@@ -2,14 +2,13 @@
 
 In the following tutorial we'll implement [CoCo](http://conversationalcomponents.com/ "CoCo")
 component into our [Dialogflow](https://dialogflow.cloud.google.com/ "Dialogflow")
-conversation flow. When a component will be triggered when relevant event matched.
+conversation flow. When a component will be triggered when a relevant event matched.
 More specific, we'll use [CoCo](http://conversationalcomponents.com/ "CoCo") [register component](https://marketplace.conversationalcomponents.com/blueprint/register_vp3 "register component")
 from the [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace").
 
 
 ## CoCo SDK Installation To Dialogflow:
 
-**! Setup Your Firebase billing account before starting !**
 
 ### Import CoCo Dialogflow SDK functions.
 * Access your agent fulfillment tab:
@@ -32,6 +31,8 @@ const { cocoComponent, cocoContext } = require("@conversationalcomponents/dialog
 ```
 
 ### Create Intent For CoCo Context.
+The intent is needed to maintain CoCo context through the conversation as long as
+CoCo provide multi-turn session with the end user.
 * Access intent tab:
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/5_intent_tab.png)
 * Create CoCo context intent:
@@ -48,6 +49,10 @@ Copy the line:
 ```javascript
 intentMap.set('coco.incontext.intent', cocoContext);
 ```
+
+**Notice**: In order to be able to send requests to API's from the fulfilment function,
+you need to activate your google firebase account. It will ask you for billing info.
+Also google provide a large free quota for the service, so you won't be charged.
 
 ## Plug Component To Your Conversation Flow.
 * Access [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace") and choose the relevant component.
