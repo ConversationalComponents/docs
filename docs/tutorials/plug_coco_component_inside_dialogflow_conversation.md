@@ -23,7 +23,7 @@ from the [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "C
 
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/3_add_coco_sdk_to_package_json.png)
 
-Copy the line:
+Copy the line(don't forget the comma in the end of line above):
 ```javascript
     "@conversationalcomponents/dialogflow-sdk": "^1.0.2"
 ```
@@ -66,9 +66,9 @@ Copy the line:
 intentMap.set('coco.incontext.intent', cocoContext);
 ```
 
-**Notice**: In order to be able to send requests to APIs from the fulfilment function,
+**Notice**: In order to be able to send external requests to APIs from the fulfilment function(in other words calling CoCo),
 you need to activate your Google firebase account. It will ask you for billing info.
-Also Google provides a substantial free quota for this service, so you won't actually be charged.
+Google provides a substantial free quota for this service, so you won't actually be charged.
 
 ## Plug Component To Your Conversation Flow.
 * Access [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace") and choose the relevant component:
@@ -88,6 +88,8 @@ Copy the line:
 intentMap.set('account.open', cocoComponent("register_vp3"));
 ```
 
+Click on DEPLOY
+
 ### Check Your Bot:
 In the image blow, you can see that we received an answer from the component
 when the correct intent triggered:
@@ -97,3 +99,11 @@ when the correct intent triggered:
 Also you'll notice a multi-turn conversation supplied by the component:
 
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/12_flow_test_2.png)
+
+## Troubleshooting
+
+* Getting the intent responses instead of the responses from the component:
+
+log in to firebase dashboard -> functions -> delete dialogFulfillmentFunction -> click on the deploy button again in the fulfillment tab in Dialogflow.
+
+*package.json and index.js might reset to the default code so repeat the steps from above*
