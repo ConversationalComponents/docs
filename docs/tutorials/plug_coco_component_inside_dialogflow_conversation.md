@@ -53,8 +53,10 @@ the catch all functionality (It is illustrated in the `Training Phrases` section
 1. Add any string as a training example
 2. Double click on the training example string
 3. Pick @sys.any from the list
+4. Enable webhook call for the intent (scroll all the way down and click on the toggles)
 
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/6_create_coco_context_intent.png)
+![](./screenshots/plug_coco_component_inside_dialogflow_conversation/toggle_webhook.png)
 
 
 ### Map CoCo Context Intent To cocoContext SDK SDK Function:
@@ -80,8 +82,15 @@ Google provides a substantial free quota for this service, so you won't actually
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/9_add_component.png)
 
 * Plug the component in to your conversation flow by mapping the relevant intent:
+1. First create or use an exisiting intent.
+2. Enable webhook call for the intent (scroll all the way down and click on the toggles)
+
+![](./screenshots/plug_coco_component_inside_dialogflow_conversation/toggle_webhook.png)
+
+3. Add mapping in the intentMap
 
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/10_plug_component.png)
+
 Copy the line:
 
 ```javascript
