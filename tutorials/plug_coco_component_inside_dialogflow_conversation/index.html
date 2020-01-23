@@ -598,8 +598,10 @@ the catch all functionality (It is illustrated in the <code>Training Phrases</co
 <li>Add any string as a training example</li>
 <li>Double click on the training example string</li>
 <li>Pick @sys.any from the list</li>
+<li>Enable webhook call for the intent (scroll all the way down and click on the toggles)</li>
 </ol>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/6_create_coco_context_intent.png" /></p>
+<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/6_create_coco_context_intent.png" />
+<img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/toggle_webhook.png" /></p>
 <h3 id="map-coco-context-intent-to-cococontext-sdk-sdk-function">Map CoCo Context Intent To cocoContext SDK SDK Function:</h3>
 <p>Map the CoCo context intent to the coco Context function from the CoCo SDK:</p>
 <p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/7_map_coco_intent_to_coco_context_function.png" />
@@ -622,9 +624,15 @@ Google provides a substantial free quota for this service, so you won't actually
 <p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/9_add_component.png" /></p>
 <ul>
 <li>Plug the component in to your conversation flow by mapping the relevant intent:</li>
+<li>First create or use an exisiting intent.</li>
+<li>Enable webhook call for the intent (scroll all the way down and click on the toggles)</li>
 </ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/10_plug_component.png" />
-Copy the line:</p>
+<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/toggle_webhook.png" /></p>
+<ol>
+<li>Add mapping in the intentMap</li>
+</ol>
+<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/10_plug_component.png" /></p>
+<p>Copy the line:</p>
 <div class="codehilite"><pre><span></span><span class="nx">intentMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;account.open&#39;</span><span class="p">,</span> <span class="nx">cocoComponent</span><span class="p">(</span><span class="s2">&quot;register_vp3&quot;</span><span class="p">));</span>
 </pre></div>
 
