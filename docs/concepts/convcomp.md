@@ -3,6 +3,8 @@
 A conversational component is a part of the conversation where an agent (virtual/real) takes over the conversation in order to accomplish one or more goals. Upon accomplishing the goal, the agent (virtual/real) relinquishes control of the conversation back to the calling agent.
 Each component is defined by the goal or goals it is attempting to solve.
 
+Conversational components are architected to be [modular](https://en.wikipedia.org/wiki/Modularity)
+
 ## Entries
 A component may be called at any point in the conversation so it needs to be ready to assume control of an existing conversation or, alternately, initiate a conversation.
 Every component needs to decide how to handle the conversation history it inherits - if any.
