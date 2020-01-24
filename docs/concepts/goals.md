@@ -1,15 +1,15 @@
 
 ## General
-[Conversation](https://en.wikipedia.org/wiki/Conversation) is an interactive communication between two or more agents(virtual or real).
+[Conversation](https://en.wikipedia.org/wiki/Conversation) is an interactive communication between two or more agents (virtual or real).
 
-Each agent has its own agenda and goals.
+Each agent has their own agenda and goals.
 
 
-In the typical framing of a reinforcement learning sceanrio from each agent point of view:
+The typical framing of a reinforcement learning scenario from each agent's point of view is such:
 
-1. his environment is the other agents which he observe and interpret to build his model of the world
-2. he maintains state - his memory based on previous observations and his model of the world 
-3. based on his state he performs actions in the environment to promote its goals
+1. His environment is the other agent's which he observes and interprets to build his model of the world
+2. He maintains state - his memory is based on previous observations and his model of the world 
+3. He performs actions based on his state in this environment in order to achieve his goals
 
 !!! note
     In a learned agent each action is paired with a reward. The agent agenda and goals are defined by these rewards.
