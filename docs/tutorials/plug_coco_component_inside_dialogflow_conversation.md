@@ -67,9 +67,8 @@ Copy the line:
 intentMap.set('coco.incontext.intent', cocoContext);
 ```
 
-**Notice**: In order to be able to send external requests to APIs from the fulfilment function(in other words calling CoCo),
-you need to activate your Google firebase account. It will ask you for billing info.
-Google provides a substantial free quota for this service, so you won't actually be charged.
+!!! Note
+    In order to be able to send external requests to APIs from the fulfilment function(in other words calling CoCo), you need to activate your Google firebase account. It will ask you for billing info.Google provides a substantial free quota for this service, so you won't actually be charged.
 
 ## Plug Component To Your Conversation Flow.
 * Access [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace") and choose the relevant component:
@@ -112,6 +111,6 @@ Also you'll notice a multi-turn conversation supplied by the component:
 
 * Getting the intent responses instead of the responses from the component:
 
-log in to firebase dashboard -> functions -> delete dialogFulfillmentFunction -> click on the deploy button again in the fulfillment tab in Dialogflow.
+log in to the firebase dashboard -> functions -> delete dialogFulfillmentFunction -> click on the deploy button again in the fulfillment tab in Dialogflow.
 
 *package.json and index.js might reset to the default code so repeat the steps from above*
