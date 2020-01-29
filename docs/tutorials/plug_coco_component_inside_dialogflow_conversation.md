@@ -59,9 +59,8 @@ the catch all functionality (It is illustrated in the `Training Phrases` section
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/toggle_webhook.png)
 
 
-### Map CoCo Context Intent To cocoContext SDK SDK Function:
-Map the CoCo context intent to the coco Context function from the CoCo SDK:
-
+### Map CoCo Context Intent To cocoContext SDK Function:
+To maintain context in multiturn components use the cocoContext helper function:
 ![](./screenshots/plug_coco_component_inside_dialogflow_conversation/7_map_coco_intent_to_coco_context_function.png)
 Copy the line:
 ```javascript
