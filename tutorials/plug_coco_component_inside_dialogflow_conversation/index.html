@@ -658,9 +658,10 @@ Copy the line:</p>
 </pre></div>
 
 
-<p><strong>Notice</strong>: In order to be able to send external requests to APIs from the fulfilment function(in other words calling CoCo),
-you need to activate your Google firebase account. It will ask you for billing info.
-Google provides a substantial free quota for this service, so you won't actually be charged.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to be able to send external requests to APIs from the fulfilment function(in other words calling CoCo), you need to activate your Google firebase account. It will ask you for billing info.Google provides a substantial free quota for this service, so you won't actually be charged.</p>
+</div>
 <h2 id="plug-component-to-your-conversation-flow">Plug Component To Your Conversation Flow.</h2>
 <ul>
 <li>Access <a href="https://marketplace.conversationalcomponents.com/" title="CoCo Marketplace">CoCo Marketplace</a> and choose the relevant component:</li>
@@ -696,7 +697,7 @@ when the correct intent triggered:</p>
 <ul>
 <li>Getting the intent responses instead of the responses from the component:</li>
 </ul>
-<p>log in to firebase dashboard -&gt; functions -&gt; delete dialogFulfillmentFunction -&gt; click on the deploy button again in the fulfillment tab in Dialogflow.</p>
+<p>log in to the firebase dashboard -&gt; functions -&gt; delete dialogFulfillmentFunction -&gt; click on the deploy button again in the fulfillment tab in Dialogflow.</p>
 <p><em>package.json and index.js might reset to the default code so repeat the steps from above</em></p>
                 
                   
