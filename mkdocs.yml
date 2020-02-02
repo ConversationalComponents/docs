@@ -36,3 +36,6 @@ extra:
       link: 'https://github.com/conversationalcomponents'
     - type: 'facebook'
       link: 'https://facebook.com/ConversationalComponents'
+
+
+google_analytics: ['UA-143011310-6', 'docs.conversationalcomponents.com']
