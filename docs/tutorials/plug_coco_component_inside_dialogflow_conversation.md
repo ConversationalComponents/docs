@@ -1,16 +1,5 @@
 # Plug a CoCo Component inside Dialogflow Conversation Flow.
 
-<details markdown="1">
-    <script type='text/javascript'>
-        window.__lo_site_id = 192748;
-            (function() {
-                var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
-                wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
-              })();
-	</script>
-</details>
-
 In the following tutorial we'll implement a [CoCo](http://conversationalcomponents.com/ "CoCo")
 component into our [Dialogflow](https://dialogflow.cloud.google.com/ "Dialogflow")
 conversation flow. A component will be triggered when a relevant intent matches.
@@ -125,3 +114,13 @@ Also you'll notice a multi-turn conversation supplied by the component:
 log in to the firebase dashboard -> functions -> delete dialogFulfillmentFunction -> click on the deploy button again in the fulfillment tab in Dialogflow.
 
 *package.json and index.js might reset to the default code so repeat the steps from above*
+
+
+<script type='text/javascript'>
+    window.__lo_site_id = 192748;
+        (function() {
+            var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+            wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+            })();
+</script>
