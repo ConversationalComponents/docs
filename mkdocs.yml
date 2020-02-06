@@ -39,3 +39,6 @@ extra:
 
 
 google_analytics: ['UA-143011310-6', 'docs.conversationalcomponents.com']
+
+extra_javascript:
+  - js_extra/luckyo.js
