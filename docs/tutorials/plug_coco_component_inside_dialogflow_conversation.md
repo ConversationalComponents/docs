@@ -1,10 +1,13 @@
-# Plug a CoCo Component inside Dialogflow Conversation Flow.
+# Incorporate a component to Dialogflow with fulfillment.
 
-In the following tutorial we'll implement a [CoCo](http://conversationalcomponents.com/ "CoCo")
-component into our [Dialogflow](https://dialogflow.cloud.google.com/ "Dialogflow")
-conversation flow. A component will be triggered when a relevant intent matches.
+In the following tutorial we'll add a component into [Dialogflow](https://dialogflow.cloud.google.com/ "Dialogflow"). 
+
+The component will be triggered when a relevant intent matches.
 More specifically, we'll use the [CoCo](http://conversationalcomponents.com/ "CoCo") [register component](https://marketplace.conversationalcomponents.com/blueprint/register_vp3 "register component")
 from the [CoCo Marketplace](https://marketplace.conversationalcomponents.com/ "CoCo Marketplace").
+
+Here's how the end result looks like:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9iGWVK7CcjQ" frameborder="0" allowfullscreen></iframe>
 
 
 ## CoCo SDK Installation To Dialogflow:
