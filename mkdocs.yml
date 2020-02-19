@@ -1,25 +1,25 @@
-site_name: Conversational Components Docs 
+site_name: CoCoHub Docs 
 nav:
-  - Overview: index.md
-  - Video Tutorials: 
-    - Marketplace: tutorials/videos.md
-    - Bot Developers: tutorials/developer_videos.md
-    - CoCo Vendors: tutorials/authors_videos.md
-  - Tutorials:
+  - About: index.md
+  - Video Guides: 
+    - CoCoHub: tutorials/videos.md
+    - Developers: tutorials/developer_videos.md
+    - Vendors: tutorials/authors_videos.md
+  - Guides:
       - Incorporate a component to Dialogflow with fulfillment: tutorials/plug_coco_component_inside_dialogflow_conversation
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
-  - Concepts:
+  - Terminologies Overview:
 #      - Agents, Goals, State, and Actions: concepts/goals.md
       - Conversational Component: concepts/convcomp.md
       - Context: concepts/context.md
-  - Chatbot Developers:
+  - Developers:
     - SDKs: SDKs.md
-  - Component Vendors:
+  - Vendors:
     - Vendor Toolkits: connectors.md
     - Publishing guidelines: vendor-guidelines.md
   - API Specs: api.md
   - ⬅️ Home: https://conversationalcomponents.com/
-  - ⬅️ Marketplace: https://marketplace.conversationalcomponents.com/
+  - ⬅️ CoCoHub: https://marketplace.conversationalcomponents.com/
 
 repo_url: 'https://github.com/conversationalcomponents/docs'
 
