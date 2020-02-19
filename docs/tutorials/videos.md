@@ -2,7 +2,7 @@
 ## Your first time on CoCoHub?
 Let's show you around a bit so you get familiar enough to go solo.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zH9Bi3Iol5E" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LJBogKYFbBA" frameborder="0" allowfullscreen></iframe>
 
 ## Customizing Components Is So Simple
 You can customize the response texts of a Conversational Component to match your bot's language and personality.
