@@ -17,4 +17,4 @@ Create a conversational component using Cognigy.
 ## How to become a Vendor and submit a new CoCo
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yg1wM9AKkjo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BK_o_qYf8KI" frameborder="0" allowfullscreen></iframe>
