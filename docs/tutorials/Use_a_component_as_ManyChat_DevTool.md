@@ -1,7 +1,7 @@
 # Use CoCo Component As ManyChat Dev-Tool
 
 At the following tutorial we'll create a flow for [ManyChat](https://manychat.com/) that will implement 
-[CoCo Namer component](https://cocohub.ai/blueprint/namer_vp3/about) in it.
+[Get Name component](https://cocohub.ai/blueprint/namer_vp3/about) in it.
 
 Link to the final flow: [namer_flow](https://manychat.com/flowPlayerPage?share_hash=1819595611640973_f35ecc00c2b7f5a2836c600c711be115a974a0d5)
 
@@ -79,6 +79,5 @@ redirect back to the HTTP request action.
 
 * Test:
 ![](./screenshots/Use_a_component_as_ManyChat_DevTool/11_Test.png)
-
 
 
