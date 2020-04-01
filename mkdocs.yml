@@ -1,4 +1,4 @@
-site_name: CoCoHub Docs 
+site_name: CoCoHub Docs
 nav:
   - About: index.md
   - Video Guides: 
@@ -7,6 +7,7 @@ nav:
     - Vendors: tutorials/authors_videos.md
   - Tutorials:
       - Incorporate a component to Dialogflow with fulfillment: tutorials/plug_coco_component_inside_dialogflow_conversation
+      - Add component to you ManyChat flow: tutorials/manychat1.md
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
   - Concepts:
 #      - Agents, Goals, State, and Actions: concepts/goals.md
@@ -25,6 +26,11 @@ repo_url: 'https://github.com/conversationalcomponents/docs'
 
 theme:
   name: material
+  palette:
+    primary: blue
+    accent: blue
+  #logo: cocohub logo-09.svg
+  #favicon: img/favicon.png
 
 markdown_extensions:
   - codehilite
