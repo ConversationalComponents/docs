@@ -1,7 +1,7 @@
 site_name: CoCoHub Docs
 nav:
   - About: index.md
-  - Video Guides: 
+  - Video Guides:
     - CoCoHub: tutorials/videos.md
     - Developers: tutorials/developer_videos.md
     - Vendors: tutorials/authors_videos.md
@@ -19,8 +19,8 @@ nav:
     - Vendor Toolkits: connectors.md
     - Publishing guidelines: vendor-guidelines.md
   - API Specs: api.md
-  - ⬅️ Home: https://conversationalcomponents.com/
-  - ⬅️ CoCoHub: https://marketplace.conversationalcomponents.com/
+  - ⬅️ CoCoHub: https://cocohub.ai/
+  - ⬅️ About AI: https://a-i.com/
 
 repo_url: 'https://github.com/conversationalcomponents/docs'
 
@@ -29,8 +29,7 @@ theme:
   palette:
     primary: blue
     accent: blue
-  #logo: cocohub logo-09.svg
-  #favicon: img/favicon.png
+    #logo: cocohub logo-09.svg
 
 markdown_extensions:
   - codehilite
@@ -38,9 +37,9 @@ markdown_extensions:
 
 extra:
   social:
-    - type: 'github'
+    - icon: fontawesome/brands/github
       link: 'https://github.com/conversationalcomponents'
-    - type: 'facebook'
+    - icon: fontawesome/brands/facebook
       link: 'https://facebook.com/ConversationalComponents'
 
 
