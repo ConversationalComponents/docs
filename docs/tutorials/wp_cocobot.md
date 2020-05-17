@@ -2,11 +2,17 @@
 
 In this tutorial we'll add a chat window to a conversational bot on Wordpress page, and use Cocohub visual editing tools to create our own bot from components. It's quick, easy, and lets you leverage powerful AI to engage your users.
 
-### Before we begin: getting the plugin
+# Table of Contents
+1. [Getting the Cocohub plugin](#getThePlugin)
+2. [Installing Cocohub plugin in Wordpress](#installInWP)
+3. [Building a bot in Cocohub](#buildingInGlue)
+4. [Configuring Cocohub plugin](#configurePlugin)
 
-We'll need a Wordpress site with admin access, and Cocobot Wordpress plugin. The plugin can be downloaded as coco-bot.zip file from here. The Worpress site with admin access is on you, though.
+### Before we begin: getting the plugin <a name="getThePlugin"/>
 
-### Installing Cocobot plugin in Wordpress
+We'll need a Wordpress site with admin access, and Cocohub Wordpress plugin. The plugin can be downloaded as a zip file from [here](https://wordpress.org/plugins/cocohub). The Worpress site with admin access is on you, though.
+
+### Installing Cocohub plugin in Wordpress <a name="installInWP"/>
 
 We'll start by opening our Wordpress dashboard, and selecting PLUGINS from the drawer.
 
@@ -18,7 +24,7 @@ Click the UPLOAD PLUGIN button (marked in red oval).
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-selection-illustrated.jpg)
 
-Click CHOOSE FILE, and select coco-bot.zip. Once that is done, click INSTALL NOW button (marked in red oval).
+Click CHOOSE FILE, and select the Cocohub plugin zip. Once that is done, click INSTALL NOW button (marked in red oval).
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-install-illustrated.jpg)
 
@@ -28,7 +34,7 @@ Now we just need to activate it. Click the ACTIVATE PLUGIN button (marked in red
 
 Great! The plugin is installed and activated.
 
-We still need to add the shortcode to the pages we want our chat window to show at. Let's go to our main page, and edit any field.
+We still need to add the shortcode to the pages we want our chat window to show at. Let's go to a page in our Wordpress site, and edit any field.
 
 ![](./screenshots/wp_cocobot/wp-main-page-botless-illustrated.jpg)
 
@@ -42,9 +48,9 @@ All done! If you'll go to the page you just updated, you should see a chat windo
 
 You'll probably want to build your own bot, though, so let's get to that.
 
-### Building a bot in Cocohob
+### Building a bot in Cocohub <a name="buildingInGlue"/>
 
-Start by heading over to [www.cocohub.ai](Cocohob), and sign in.
+Start by heading over to [Cocohub](www.cocohub.ai), and sign in.
 
 Welcome!
 
@@ -75,19 +81,19 @@ This bot will get the user's name, and when it's finished getting the name it'll
 
 Nicely done!
 
-Time to use our new bot in Cocobot Wordpress plugin. Click the COPY GLUE ID button on the control panel:
+Time to use our new bot in Cocohub Wordpress plugin. Click the COPY GLUE ID button on the control panel:
 
 ![](./screenshots/wp_cocobot/bots-studio-2-nodes-saved-illustrated.jpg)
 
 With the newly created Glue ID copied to our clipboard, let's head back to Wordpress admin dashboard, and configure our plugin to use the Glued bot.
 
-### Configuring Cocobot Wordpress plugin
+### Configuring Cocohub Wordpress plugin <a name="configurePlugin"/>
 
 Head over to Plugins, and click SETTINGS on CocoHub plugin.
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-choose-config-illustrated.jpg)
 
-Now we just to have to pase the ID of the Glue component we created into **component-id or url** field (marked in red oval), and click SAVE CHANGES.
+Now we just to have to pass the ID of the Glue component we created into **component-id or url** field (marked in red oval), and click SAVE CHANGES.
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-coco-config-illustrated.jpg)
 
@@ -95,12 +101,14 @@ All done! Head back to the page you inserted [cocobot] shortcode to, and chat wi
 
 Or change the other settings first:
 
-**Name** is the name that's appear in the header of your bot's chat window
+**Name** is the name that'll appear in the header of your bot's chat window
 
-**Bot Greeting** is what the bot will say to user when the window fist loads
+**Bot Greeting** is what the bot will say to user when the chat window fist loads
 
 **Height** and **Width** define the dimentions of your bot's chat window
 
 **Is Fabless** is a checkbox for whether the chat window has a close/open button or not. When it's on, the chat window cannot be closed.
 
 **Chat-window is open by default** is a checkbox for whether the chat window starts opened. Only relevant if **Is Fabless** is off.
+
+That concludes the tutotial. Hope it'll help you make awesome, useful, engaging, fantastic bots!
