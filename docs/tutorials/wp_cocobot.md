@@ -3,14 +3,10 @@
 In this tutorial we'll add a chat window to a conversational bot on Wordpress page, and use Cocohub visual editing tools to create our own bot from components. It's quick, easy, and lets you leverage powerful AI to engage your users.
 
 # Table of Contents
-1. [Getting the Cocohub plugin](#getThePlugin)
+
 2. [Installing Cocohub plugin in Wordpress](#installInWP)
 3. [Building a bot in Cocohub](#buildingInGlue)
 4. [Configuring Cocohub plugin](#configurePlugin)
-
-### Before we begin: getting the plugin <a name="getThePlugin"/>
-
-We'll need a Wordpress site with admin access, and Cocohub Wordpress plugin. The plugin can be downloaded as a zip file from [here](https://wordpress.org/plugins/cocohub). The Worpress site with admin access is on you, though.
 
 ### Installing Cocohub plugin in Wordpress <a name="installInWP"/>
 
@@ -20,17 +16,13 @@ Click the ADD NEW button (marked in red oval).
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-illustrated.jpg)
 
-Click the UPLOAD PLUGIN button (marked in red oval).
+Search for cocohub in keywords, and click the INSTALL NOW button on the card.
 
-![](./screenshots/wp_cocobot/wp-add-plugin-selection-illustrated.jpg)
+![](./screenshots/wp_cocobot/install-coco-find-illustrated.jpg)
 
-Click CHOOSE FILE, and select the Cocohub plugin zip. Once that is done, click INSTALL NOW button (marked in red oval).
+Now we need to activate the plugin. Click the ACTIVATE button on the card.
 
-![](./screenshots/wp_cocobot/wp-add-plugin-install-illustrated.jpg)
-
-Now we just need to activate it. Click the ACTIVATE PLUGIN button (marked in red oval).
-
-![](./screenshots/wp_cocobot/wp-add-plugin-activate-illustrated.jpg)
+![](./screenshots/wp_cocobot/install-coco-activate-illustrated.jpg)
 
 Great! The plugin is installed and activated.
 
