@@ -15,7 +15,7 @@
     
     
       
-        <title>Wordpress Cocohub Tutorial - CoCoHub Docs</title>
+        <title>Build a modular bot on wordpress - CoCoHub Docs</title>
       
     
     
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Wordpress Cocohub Tutorial
+              Build a modular bot on wordpress
             
           </span>
         </div>
@@ -265,10 +265,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorials
@@ -319,6 +321,74 @@
     <a href="../use_a_component_with_dialogflow_external" title="Calling a CoCo from Dialogflow(externally)" class="md-nav__link">
       Calling a CoCo from Dialogflow(externally)
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Build a modular bot on wordpress
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Build a modular bot on wordpress" class="md-nav__link md-nav__link--active">
+      Build a modular bot on wordpress
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-cocohub-plugin-in-wordpress" class="md-nav__link">
+    Installing CoCoHub plugin in Wordpress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-bot-in-cocohub" class="md-nav__link">
+    Building a bot in CoCoHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-cocohub-wordpress-plugin" class="md-nav__link">
+    Configuring CoCoHub Wordpress plugin
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -530,6 +600,37 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-cocohub-plugin-in-wordpress" class="md-nav__link">
+    Installing CoCoHub plugin in Wordpress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-bot-in-cocohub" class="md-nav__link">
+    Building a bot in CoCoHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-cocohub-wordpress-plugin" class="md-nav__link">
+    Configuring CoCoHub Wordpress plugin
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -548,19 +649,13 @@
                   
                 
                 
-                <h1 id="wordpress-cocohub-tutorial">Wordpress Cocohub Tutorial</h1>
-<p>In this tutorial we'll guide you through adding a chat window to a conversational bot on a Wordpress page as well as using Cocohub visual editing tools to create your own bot from components. It's quick, easy, and lets you leverage powerful AI to engage your users.</p>
-<h1 id="table-of-contents">Table of Contents</h1>
-<ol>
-<li><a href="#installInWP">Installing Cocohub plugin in Wordpress</a></li>
-<li><a href="#buildingInGlue">Building a bot in Cocohub</a></li>
-<li><a href="#configurePlugin">Configuring Cocohub plugin</a></li>
-</ol>
-<h3 id="installing-cocohub-plugin-in-wordpress">Installing Cocohub plugin in Wordpress <a name="installInWP"/></h3>
+                <h1 id="wordpress-cocohub-tutorial">Wordpress CoCoHub Tutorial</h1>
+<p>In this tutorial we'll guide you through adding a chat window to a conversational bot on a Wordpress page as well as using CoCoHub visual editing tools to create your own bot from components. It's quick, easy, and lets you leverage powerful AI to engage your users.</p>
+<h2 id="installing-cocohub-plugin-in-wordpress">Installing CoCoHub plugin in Wordpress</h2>
 <p>We'll start by opening our Wordpress dashboard, and selecting PLUGINS from the drawer.</p>
 <p>Click the ADD NEW button (marked in red oval).</p>
 <p><img alt="" src="../screenshots/wp_cocobot/wp-add-plugin-illustrated.jpg" /></p>
-<p>Search for cocohub in keywords, and click the INSTALL NOW button on the card (marked in red oval).</p>
+<p>Search for CoCoHub in keywords, and click the INSTALL NOW button on the card (marked in red oval).</p>
 <p><img alt="" src="../screenshots/wp_cocobot/install-coco-find-illustrated.jpg" /></p>
 <p>Now we need to activate the plugin. Click the ACTIVATE button on the card.</p>
 <p><img alt="" src="../screenshots/wp_cocobot/install-coco-activate-illustrated.jpg" /></p>
@@ -572,13 +667,16 @@
 <p>All done! If you navigate to the page you've just updated, you should see a chat window there. It's the interface to a Cocobot, the Conversational Components evangelist bot.</p>
 <p><img alt="" src="../screenshots/wp_cocobot/wp-main-page-with-bot.jpg" /></p>
 <p>You'll probably want to build your own bot, though, so let's get to that.</p>
-<h3 id="building-a-bot-in-cocohub">Building a bot in Cocohub <a name="buildingInGlue"/></h3>
-<p>Start by heading over to <a href="https://cocohub.ai">Cocohub</a>, and signing in or registering, if you're a first time user.</p>
+<h2 id="building-a-bot-in-cocohub">Building a bot in CoCoHub</h2>
+<p>Start by heading over to <a href="www.cocohub.ai">CoCoHub</a>, and signing in or registering, if you're a first time user.</p>
 <p>Welcome!</p>
 <p>When you're ready, choose Bots Studio from the drawer, and click ADD to create a new bot.</p>
-<p><em>Everything in Coco bots is made of components. The component for making a bot is called a Glue component - it glues other components together</em></p>
 <p><img alt="" src="../screenshots/wp_cocobot/bots-studio-empty-with-text.jpg" /></p>
 <p>Now we have the most basic glue possible - just a single node (<em>that's what we call components when they're in glue</em>). By default it points to a component called namer - a component for getting and verifying a user's name.</p>
+<div class="admonition note">
+<p class="admonition-title">Pro Tip</p>
+<p>Everything in Coco bots is made of components. The component for making a bot is called a Glue component - it glues other components together. Since a glue is also a component, you can use glue components as nodes in a glue! </p>
+</div>
 <p><img alt="" src="../screenshots/wp_cocobot/bots-studio-elements-explained.jpg" /></p>
 <p>That's not much of a bot, yet :)</p>
 <p>Click anywhere on the background for an ADD NODE button to appear. Click on it to add a new node. We should now have something that looks like this:</p>
@@ -589,11 +687,11 @@
 <p><img alt="" src="../screenshots/wp_cocobot/bots-studio-2-nodes-explained.jpg" /></p>
 <p>This bot will get the user's name, and when it's finished getting the name it'll also get the user's email address. Now we can save the changes (<em>SAVE button in the control panel</em>), and chat to our newly created bot in the chat window. Note that if SAVE button is enabled, you still have unsaved changes.</p>
 <p>Nicely done!</p>
-<p>Time to use our new bot in the Cocohub Wordpress plugin. Click the COPY GLUE ID button on the control panel:</p>
+<p>Time to use our new bot in the CoCoHub Wordpress plugin. Click the COPY GLUE ID button on the control panel:</p>
 <p><img alt="" src="../screenshots/wp_cocobot/bots-studio-2-nodes-saved-illustrated.jpg" /></p>
 <p>With the newly created Glue ID copied to our clipboard, let's head back to Wordpress admin dashboard, and configure our plugin to use the Glued bot.</p>
-<h3 id="configuring-cocohub-wordpress-plugin">Configuring Cocohub Wordpress plugin <a name="configurePlugin"/></h3>
-<p>Head over to Plugins, and click SETTINGS on CocoHub plugin.</p>
+<h2 id="configuring-cocohub-wordpress-plugin">Configuring CoCoHub Wordpress plugin</h2>
+<p>Head over to Plugins, and click SETTINGS on CoCoHub plugin.</p>
 <p><img alt="" src="../screenshots/wp_cocobot/wp-add-plugin-choose-config-illustrated.jpg" /></p>
 <p>Now we just to have to pass the ID of the Glue component we created into <strong>component-id or url</strong> field (marked in red oval), and click SAVE CHANGES.</p>
 <p><img alt="" src="../screenshots/wp_cocobot/wp-add-plugin-coco-config-illustrated.jpg" /></p>
@@ -619,6 +717,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../manychat1/" title="Add component to you ManyChat flow" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Add component to you ManyChat flow
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../concepts/convcomp/" title="Conversational Component" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Conversational Component
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
