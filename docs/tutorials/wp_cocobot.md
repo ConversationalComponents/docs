@@ -8,7 +8,7 @@ In this tutorial we'll guide you through adding a chat window to a conversationa
 3. [Building a bot in Cocohub](#buildingInGlue)
 4. [Configuring Cocohub plugin](#configurePlugin)
 
-### Installing Cocohub plugin in Wordpress <a name="installInWP"/>
+### Installing Cocohub plugin in Wordpress <a name="installInWP"></a>
 
 We'll start by opening our Wordpress dashboard, and selecting PLUGINS from the drawer.
 
