@@ -9,6 +9,7 @@ nav:
       - Incorporate a component to Dialogflow with fulfillment: tutorials/plug_coco_component_inside_dialogflow_conversation
       - Add component to you ManyChat flow: tutorials/manychat1.md
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
+      - Build a modular bot on wordpress: tutorials/wp_cocobot.md
   - Concepts:
 #      - Agents, Goals, State, and Actions: concepts/goals.md
       - Conversational Component: concepts/convcomp.md
