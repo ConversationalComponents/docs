@@ -1,14 +1,8 @@
-# Wordpress Cocohub Tutorial
+# Wordpress CoCoHub Tutorial
 
-In this tutorial we'll guide you through adding a chat window to a conversational bot on a Wordpress page as well as using Cocohub visual editing tools to create your own bot from components. It's quick, easy, and lets you leverage powerful AI to engage your users.
+In this tutorial we'll guide you through adding a chat window to a conversational bot on a Wordpress page as well as using CoCoHub visual editing tools to create your own bot from components. It's quick, easy, and lets you leverage powerful AI to engage your users.
 
-# Table of Contents
-
-2. [Installing Cocohub plugin in Wordpress](#installInWP)
-3. [Building a bot in Cocohub](#buildingInGlue)
-4. [Configuring Cocohub plugin](#configurePlugin)
-
-### Installing Cocohub plugin in Wordpress
+## Installing CoCoHub plugin in Wordpress
 
 We'll start by opening our Wordpress dashboard, and selecting PLUGINS from the drawer.
 
@@ -16,7 +10,7 @@ Click the ADD NEW button (marked in red oval).
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-illustrated.jpg)
 
-Search for cocohub in keywords, and click the INSTALL NOW button on the card (marked in red oval).
+Search for CoCoHub in keywords, and click the INSTALL NOW button on the card (marked in red oval).
 
 ![](./screenshots/wp_cocobot/install-coco-find-illustrated.jpg)
 
@@ -40,9 +34,9 @@ All done! If you navigate to the page you've just updated, you should see a chat
 
 You'll probably want to build your own bot, though, so let's get to that.
 
-### Building a bot in Cocohub
+## Building a bot in CoCoHub
 
-Start by heading over to [Cocohub](https://cocohub.ai), and signing in or registering, if you're a first time user.
+Start by heading over to [CoCoHub](www.cocohub.ai), and signing in or registering, if you're a first time user.
 
 Welcome!
 
@@ -75,15 +69,15 @@ This bot will get the user's name, and when it's finished getting the name it'll
 
 Nicely done!
 
-Time to use our new bot in the Cocohub Wordpress plugin. Click the COPY GLUE ID button on the control panel:
+Time to use our new bot in the CoCoHub Wordpress plugin. Click the COPY GLUE ID button on the control panel:
 
 ![](./screenshots/wp_cocobot/bots-studio-2-nodes-saved-illustrated.jpg)
 
 With the newly created Glue ID copied to our clipboard, let's head back to Wordpress admin dashboard, and configure our plugin to use the Glued bot.
 
-### Configuring Cocohub Wordpress plugin
+## Configuring CoCoHub Wordpress plugin
 
-Head over to Plugins, and click SETTINGS on CocoHub plugin.
+Head over to Plugins, and click SETTINGS on CoCoHub plugin.
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-choose-config-illustrated.jpg)
 
