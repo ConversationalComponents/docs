@@ -16,7 +16,7 @@ Click the ADD NEW button (marked in red oval).
 
 ![](./screenshots/wp_cocobot/wp-add-plugin-illustrated.jpg)
 
-Search for cocohub in keywords, and click the INSTALL NOW button on the card.
+Search for cocohub in keywords, and click the INSTALL NOW button on the card (marked in red oval).
 
 ![](./screenshots/wp_cocobot/install-coco-find-illustrated.jpg)
 
