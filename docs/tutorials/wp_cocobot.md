@@ -8,7 +8,7 @@ In this tutorial we'll guide you through adding a chat window to a conversationa
 3. [Building a bot in Cocohub](#buildingInGlue)
 4. [Configuring Cocohub plugin](#configurePlugin)
 
-### Installing Cocohub plugin in Wordpress <a name="installInWP"/>
+### Installing Cocohub plugin in Wordpress
 
 We'll start by opening our Wordpress dashboard, and selecting PLUGINS from the drawer.
 
@@ -40,7 +40,7 @@ All done! If you navigate to the page you've just updated, you should see a chat
 
 You'll probably want to build your own bot, though, so let's get to that.
 
-### Building a bot in Cocohub <a name="buildingInGlue"/>
+### Building a bot in Cocohub
 
 Start by heading over to [Cocohub](https://cocohub.ai), and signing in or registering, if you're a first time user.
 
@@ -81,7 +81,7 @@ Time to use our new bot in the Cocohub Wordpress plugin. Click the COPY GLUE ID 
 
 With the newly created Glue ID copied to our clipboard, let's head back to Wordpress admin dashboard, and configure our plugin to use the Glued bot.
 
-### Configuring Cocohub Wordpress plugin <a name="configurePlugin"/>
+### Configuring Cocohub Wordpress plugin
 
 Head over to Plugins, and click SETTINGS on CocoHub plugin.
 
