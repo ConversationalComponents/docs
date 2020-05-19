@@ -42,7 +42,7 @@ You'll probably want to build your own bot, though, so let's get to that.
 
 ### Building a bot in Cocohub <a name="buildingInGlue"/>
 
-Start by heading over to [Cocohub](www.cocohub.ai), and signing in or registering, if you're a first time user.
+Start by heading over to [Cocohub](https://cocohub.ai), and signing in or registering, if you're a first time user.
 
 Welcome!
 
