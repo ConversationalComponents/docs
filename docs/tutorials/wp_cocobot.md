@@ -8,7 +8,7 @@ In this tutorial we'll guide you through adding a chat window to a conversationa
 3. [Building a bot in Cocohub](#buildingInGlue)
 4. [Configuring Cocohub plugin](#configurePlugin)
 
-### Installing Cocohub plugin in Wordpress <a name="installInWP"/>
+### Installing Cocohub plugin in Wordpress <a name="installInWP"></a>
 
 We'll start by opening our Wordpress dashboard, and selecting PLUGINS from the drawer.
 
@@ -40,7 +40,7 @@ All done! If you navigate to the page you've just updated, you should see a chat
 
 You'll probably want to build your own bot, though, so let's get to that.
 
-### Building a bot in Cocohub <a name="buildingInGlue"/>
+### Building a bot in Cocohub <a name="buildingInGlue"></a>
 
 Start by heading over to [Cocohub](www.cocohub.ai), and signing in or registering, if you're a first time user.
 
@@ -48,11 +48,12 @@ Welcome!
 
 When you're ready, choose Bots Studio from the drawer, and click ADD to create a new bot.
 
-_Everything in Coco bots is made of components. The component for making a bot is called a Glue component - it glues other components together_
-
 ![](./screenshots/wp_cocobot/bots-studio-empty-with-text.jpg)
 
 Now we have the most basic glue possible - just a single node (_that's what we call components when they're in glue_). By default it points to a component called namer - a component for getting and verifying a user's name.
+
+!!!note "Pro Tip"
+    Everything in Coco bots is made of components. The component for making a bot is called a Glue component - it glues other components together. Since a glue is also a component, you can use glue components as nodes in a glue! 
 
 ![](./screenshots/wp_cocobot/bots-studio-elements-explained.jpg)
 
@@ -80,7 +81,7 @@ Time to use our new bot in the Cocohub Wordpress plugin. Click the COPY GLUE ID 
 
 With the newly created Glue ID copied to our clipboard, let's head back to Wordpress admin dashboard, and configure our plugin to use the Glued bot.
 
-### Configuring Cocohub Wordpress plugin <a name="configurePlugin"/>
+### Configuring Cocohub Wordpress plugin <a name="configurePlugin"></a>
 
 Head over to Plugins, and click SETTINGS on CocoHub plugin.
 
