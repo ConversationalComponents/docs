@@ -48,3 +48,5 @@ google_analytics: ['UA-143011310-6', 'docs.conversationalcomponents.com']
 
 extra_javascript:
   - js_extra/luckyo.js
+  - js_extra/gitter.js
+  - https://sidecar.gitter.im/dist/sidecar.v1.js
