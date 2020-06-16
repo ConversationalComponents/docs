@@ -44,36 +44,63 @@ When you're ready, choose Bots Studio from the drawer, and click ADD to create a
 
 ![](./screenshots/wp_cocobot/bots-studio-empty-with-text.jpg)
 
-Now we have the most basic glue possible - just a single node (_that's what we call components when they're in glue_). By default it points to a component called namer - a component for getting and verifying a user's name.
+Now we should have something that looks like this:
+
+![](./screenshots/wp_cocobot/bots-studio-initial-view.jpg)
+
+Glue works with Nodes and Links - nodes are containers for components, and links route conversation flow between components. 
+
+Let's take a deeper look at the leftmost node:
+
+![](./screenshots/wp_cocobot/wp-glue-entry-component.jpg)
+
+The gold star in the rightmost corner indicates that it's an Entry component. This is the first component the bot's user will converse with. There must always be an entry component in each Glue.
+
+The text field containing namer_vp3 is the components associated with this node. The default component is namer_vp3, but you can use any component from Cocohub here. Click on it to enter search mode.
+
+DRAG TO LINK button creates a link between nodes. We'll discuss this in greater detail below.
+
+![](./screenshots/wp_cocobot/wp-glue-components.jpg)
+
+This is what a couple of linked nodes look like. 
+
+Incoming link from another node means that another node has an action on which conversation flow will route to this component.
+
+Outgoing link is a route from a node to a different one. This is what's created using the DRAG TO LINK button.
+
+Outgoing link controls allow you to change the outgoing link. 
+The text field containing "component done" allows you to select the action on which routing to a different node will happen. The default action is "component done" - that is, when the component has achieved it's goal. 
+You can also delete the link here.
+
+Non-entry node options is a menu of controls for a non-entry node - it allows you to set a node as entry or to delete it.
+
+Parameters is a collapsible field for components that have parameters associated with them. "email_pv1" component has them, and when expanded the parameters look like this:
+
+![](./screenshots/wp_cocobot/wp-glue-email-node.jpg)
+
+If an email is associated with your account, it'll be in the address field. This is the email address to which the results will be sent once the bot is finished.
+
+!!!note "Warning"
+    If there is no email in the address field, you won't get the email!
+
+Last, but not least, the general Glue controls:
+
+![](./screenshots/wp_cocobot/wp-glue-controls-explained.jpg)
+
+Save and Undo buttons are only enabled if you can save or undo. Saving generates a new Glue ID, and resets the chat window. 
+
+COPY GLUE ID button - copies the last saved Glue ID to your clipboard.
+
+Chat window is where you can talk to the latest saved version of your bot. Please note that if SAVE button is turned on, you have unsaved changes which will not be reflected in the chat.
+ 
+This bot will get the user's name, and when it's finished getting the name it'll also get the user's email address. Once all that is done, it'll send you an email with the user's details. Now we can save the changes (_SAVE button in the control panel_), and chat to our newly created bot in the chat window. 
 
 !!!note "Pro Tip"
     Everything in Coco bots is made of components. The component for making a bot is called a Glue component - it glues other components together. Since a glue is also a component, you can use glue components as nodes in a glue! 
 
-![](./screenshots/wp_cocobot/bots-studio-elements-explained.jpg)
-
-That's not much of a bot, yet :)
-
-Click anywhere on the background for an ADD NODE button to appear. Click on it to add a new node. We should now have something that looks like this:
-
-![](./screenshots/wp_cocobot/bots-studio-2-nodes-unlinked.jpg)
-
-Still not much of a bot :/ We have an entry node (_the one on the left, with the golden star to the right of the component name_), and another one. You might want to change the component the second node uses - they always default to namer. In the example below it's been changed to register_vp3, a component that asks the user for their email address.
-
-Also, they're as yet unlinked, so use the DRAG TO LINK button to connect the first node to the second node.
-
-Now we have a bot that loooks a bit like this:
-
-![](./screenshots/wp_cocobot/bots-studio-2-nodes-explained.jpg)
-
-This bot will get the user's name, and when it's finished getting the name it'll also get the user's email address. Now we can save the changes (_SAVE button in the control panel_), and chat to our newly created bot in the chat window. Note that if SAVE button is enabled, you still have unsaved changes.
-
 Nicely done!
 
-Time to use our new bot in the CoCoHub Wordpress plugin. Click the COPY GLUE ID button on the control panel:
-
-![](./screenshots/wp_cocobot/bots-studio-2-nodes-saved-illustrated.jpg)
-
-With the newly created Glue ID copied to our clipboard, let's head back to Wordpress admin dashboard, and configure our plugin to use the Glued bot.
+Time to use our new bot in the Cocohub Wordpress plugin. Let's save any changes we have, and click the COPY GLUE ID button. Now let's head back to Wordpress admin dashboard, and configure our plugin to use the Glued bot.
 
 ## Configuring CoCoHub Wordpress plugin
 
