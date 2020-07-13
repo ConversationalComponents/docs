@@ -23,7 +23,7 @@ As an example we'll create a Alexa Word Game Skill:
     * **Polly Voice ID**: The voice which the skill will use. Here are the available voices: [Available Voices](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html "Available Voices").
     * **End Statement**: Skill response when users wishes to end the skill.
     * **Help Statement**: Skill response will be returned on AMAZON. Help intent.
-    * **Skill Invocation Name**: The phrase which will invoke the skill. Eg. Alexa, open Jeopardy
+    * **Skill Invocation Name**: The phrase which will invoke the skill. e.g. Alexa, open Jeopardy
 ![](./screenshots/alexa_skill_from_scratch/3_Add_Skill_On_Service.png)
 
 ## Configure Your Alexa Skill
