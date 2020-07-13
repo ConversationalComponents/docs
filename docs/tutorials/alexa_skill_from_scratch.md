@@ -7,7 +7,7 @@
 
 ## Get A Component
 
-As an example we'll create a Alexa Word Game Skill:
+As an example we'll create an Alexa Word Game Skill:
 
 * Go to [CoCoHub](https://cocohub.ai/ "CoCoHub"), sign Up and click Bot Studio on the left sidebar.
 * Create a new component from the "Word Games" Template.
