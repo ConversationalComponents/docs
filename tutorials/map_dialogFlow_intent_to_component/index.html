@@ -15,7 +15,7 @@
     
     
       
-        <title>Incorporate a component to Dialogflow with fulfillment. - CoCoHub Docs</title>
+        <title>Map DialogFlow Intent To Component - CoCoHub Docs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#incorporate-a-component-to-dialogflow-with-fulfillment" class="md-skip">
+        <a href="#map-dialogflow-intent-to-component" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Incorporate a component to Dialogflow with fulfillment.
+              Map DialogFlow Intent To Component
             
           </span>
         </div>
@@ -564,62 +564,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#coco-sdk-installation-to-dialogflow" class="md-nav__link">
-    CoCo SDK Installation To Dialogflow:
+  <a href="#steps" class="md-nav__link">
+    Steps:
   </a>
-  
-    <nav class="md-nav" aria-label="CoCo SDK Installation To Dialogflow:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#import-coco-dialogflow-sdk-functions" class="md-nav__link">
-    Import CoCo Dialogflow SDK functions.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-intent-for-coco-context" class="md-nav__link">
-    Create Intent For CoCo Context.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#map-coco-context-intent-to-cococontext-sdk-function" class="md-nav__link">
-    Map CoCo Context Intent To cocoContext SDK Function:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plug-component-to-your-conversation-flow" class="md-nav__link">
-    Plug Component To Your Conversation Flow.
+  <a href="#get-a-component" class="md-nav__link">
+    Get a component.
   </a>
-  
-    <nav class="md-nav" aria-label="Plug Component To Your Conversation Flow.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#check-your-bot" class="md-nav__link">
-    Check Your Bot:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    Troubleshooting
+  <a href="#create-dialogflow-agent-on-cocohubs-dialogflow-service" class="md-nav__link">
+    Create Dialogflow Agent On  CoCoHub's Dialogflow Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-zip-coco-intent-to-your-agent" class="md-nav__link">
+    Import ZIP CoCo Intent To Your Agent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-webhook-at-the-fulfillment-section" class="md-nav__link">
+    Enable webhook at the Fulfillment Section
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-webhook-call-on-the-target-intent" class="md-nav__link">
+    Enable webhook call On The Target Intent.
   </a>
   
 </li>
@@ -636,7 +617,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/conversationalcomponents/docs/edit/master/docs/tutorials/plug_coco_component_inside_dialogflow_conversation.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/conversationalcomponents/docs/edit/master/docs/tutorials/map_dialogFlow_intent_to_component.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -644,110 +625,57 @@
                   
                 
                 
-                <h1 id="incorporate-a-component-to-dialogflow-with-fulfillment">Incorporate a component to Dialogflow with fulfillment.</h1>
+                <h1 id="map-dialogflow-intent-to-component">Map DialogFlow Intent To Component</h1>
 <p>In the following tutorial we'll add a component into <a href="https://dialogflow.cloud.google.com/" title="Dialogflow">Dialogflow</a>. </p>
 <p>The component will be triggered when a relevant intent matches.
-More specifically, we'll use the <a href="http://conversationalcomponents.com/" title="CoCo">CoCo</a> <a href="https://marketplace.conversationalcomponents.com/blueprint/register_vp3" title="register component">register component</a>
-from the <a href="https://marketplace.conversationalcomponents.com/" title="CoCo Marketplace">CoCo Marketplace</a>.</p>
+More specifically, we'll use the <a href="https://cocohub.ai/blueprint/register_vp3/about" title="register component">register component</a>
+from the <a href="https://cocohub.ai/" title="CoCo Marketplace">Hub</a>.</p>
 <p>Here's how the end result looks like:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9iGWVK7CcjQ" frameborder="0" allowfullscreen></iframe></p>
-<h2 id="coco-sdk-installation-to-dialogflow">CoCo SDK Installation To Dialogflow:</h2>
-<h3 id="import-coco-dialogflow-sdk-functions">Import CoCo Dialogflow SDK functions.</h3>
+<h4 id="steps">Steps:</h4>
 <ul>
-<li>Access your agent fulfillment tab:</li>
+<li>Choose one or more relevant components, using CoCoHub's Bot Studio editor.</li>
+<li>Create a new agent on CoCoHub's Dialogflow Service.</li>
+<li>Import CoCo intent from dedicated ZIP (Available on agent tag from the step above).</li>
+<li>Enable webhook at the Fulfillment section and set the url to be the endpoint from the steps above.</li>
+<li>Enable webhook call on the target intent.</li>
 </ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/1_fulfillment_tab.png" /></p>
+<h2 id="get-a-component">Get a component.</h2>
 <ul>
-<li>Enable the inline editor functionality:</li>
+<li>Go to <a href="https://cocohub.ai/" title="CoCoHub">CoCoHub</a>, sign Up.</li>
+<li>We will use the register component <a href="https://cocohub.ai/blueprint/register_vp3/about" title="register component">register component</a>
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/1_Get_Component.png" /></li>
 </ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/2_enable_inline_editor.png" /></p>
+<h2 id="create-dialogflow-agent-on-cocohubs-dialogflow-service">Create Dialogflow Agent On  CoCoHub's Dialogflow Service</h2>
 <ul>
-<li>Add CoCo SDK To Package JSON:</li>
+<li>Press on "Add An Agent" button.</li>
+<li>Press on "Add Intent/Component Pair" to map intent name to component ID.
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/2_Add_New_Agent.png" /></li>
 </ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/3_add_coco_sdk_to_package_json.png" /></p>
-<p>Copy the line(don't forget the comma in the end of line above):</p>
-<div class="codehilite"><pre><span></span><code>    <span class="s2">&quot;@conversationalcomponents/dialogflow-sdk&quot;</span><span class="o">:</span> <span class="s2">&quot;^1.0.2&quot;</span>
-</code></pre></div>
-
-
+<h2 id="import-zip-coco-intent-to-your-agent">Import ZIP CoCo Intent To Your Agent</h2>
 <ul>
-<li>Import CoCo SDK functions:</li>
+<li>Download the intent ZIP file from the dialogflow service.
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/3_Download_ZIP.png" /></li>
+<li>Go to Agent settings.</li>
+<li>Go to "Export And Import".</li>
+<li>Press Import and choose the downloaded ZIP file.
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/4_Import_ZIP.png" /></li>
 </ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/4_import_coco_dialogflow_sdk.png" /></p>
-<p>Copy the line:</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">const</span> <span class="p">{</span> <span class="nx">cocoComponent</span><span class="p">,</span> <span class="nx">cocoContext</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@conversationalcomponents/dialogflow-sdk&quot;</span><span class="p">);</span>
-</code></pre></div>
-
-
-<h3 id="create-intent-for-coco-context">Create Intent For CoCo Context.</h3>
-<p>The intent is needed to maintain CoCo context through the conversation as long as
-CoCo handles the multi-turn session with the end user.</p>
+<h2 id="enable-webhook-at-the-fulfillment-section">Enable webhook at the Fulfillment Section</h2>
 <ul>
-<li>Access intent tab:</li>
+<li>Go to the Fulfillment section.                 </li>
+<li>Press on enable webhook.
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/5_Enable_Webhook.png" /></li>
+<li>Set the url to be the endpoint from the dialogflow CoCoHub's service.
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/6_Copy_Link.png" />
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/7_Set_URL.png" /></li>
 </ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/5_intent_tab.png" /></p>
+<h2 id="enable-webhook-call-on-the-target-intent">Enable webhook call On The Target Intent.</h2>
 <ul>
-<li>Create CoCo context intent:</li>
+<li>Go to the target intent.</li>
+<li>Scroll to the bottom and press on enable webhook call.
+<img alt="" src="../screenshots/map_dialogFlow_intent_to_component/8_Enable_Webhook_Call.png" /></li>
 </ul>
-<p>The intent must have an input context called <code>coco</code>, also it has to be configured with
-the catch all functionality (It is illustrated in the <code>Training Phrases</code> section of the picture below).</p>
-<ol>
-<li>Add any string as a training example</li>
-<li>Double click on the training example string</li>
-<li>Pick @sys.any from the list</li>
-<li>Enable webhook call for the intent (scroll all the way down and click on the toggles)</li>
-</ol>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/6_create_coco_context_intent.png" />
-<img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/toggle_webhook.png" /></p>
-<h3 id="map-coco-context-intent-to-cococontext-sdk-function">Map CoCo Context Intent To cocoContext SDK Function:</h3>
-<p>To maintain context in multiturn components use the cocoContext helper function:
-<img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/7_map_coco_intent_to_coco_context_function.png" />
-Copy the line:</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">intentMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;coco.incontext.intent&#39;</span><span class="p">,</span> <span class="nx">cocoContext</span><span class="p">);</span>
-</code></pre></div>
-
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In order to be able to send external requests to APIs from the fulfilment function(in other words calling CoCo), you need to activate your Google firebase account. It will ask you for billing info.Google provides a substantial free quota for this service, so you won't actually be charged.</p>
-</div>
-<h2 id="plug-component-to-your-conversation-flow">Plug Component To Your Conversation Flow.</h2>
-<ul>
-<li>Access <a href="https://marketplace.conversationalcomponents.com/" title="CoCo Marketplace">CoCo Marketplace</a> and choose the relevant component:</li>
-</ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/8_register_component.png" /></p>
-<ul>
-<li>Add the component to your CoCo workspace:</li>
-</ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/9_add_component.png" /></p>
-<ul>
-<li>Plug the component in to your conversation flow by mapping the relevant intent:</li>
-<li>First create or use an exisiting intent.</li>
-<li>Enable webhook call for the intent (scroll all the way down and click on the toggles)</li>
-</ul>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/toggle_webhook.png" /></p>
-<ol>
-<li>Add mapping in the intentMap</li>
-</ol>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/10_plug_component.png" /></p>
-<p>Copy the line:</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">intentMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;account.open&#39;</span><span class="p">,</span> <span class="nx">cocoComponent</span><span class="p">(</span><span class="s2">&quot;register_vp3&quot;</span><span class="p">));</span>
-</code></pre></div>
-
-
-<p>Click on DEPLOY</p>
-<h3 id="check-your-bot">Check Your Bot:</h3>
-<p>In the image blow, you can see that we received an answer from the component
-when the correct intent triggered:</p>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/11_flow_test.png" /></p>
-<p>Also you'll notice a multi-turn conversation supplied by the component:</p>
-<p><img alt="" src="../screenshots/plug_coco_component_inside_dialogflow_conversation/12_flow_test_2.png" /></p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<ul>
-<li>Getting the intent responses instead of the responses from the component:</li>
-</ul>
-<p>log in to the firebase dashboard -&gt; functions -&gt; delete dialogFulfillmentFunction -&gt; click on the deploy button again in the fulfillment tab in Dialogflow.</p>
-<p><em>package.json and index.js might reset to the default code so repeat the steps from above</em></p>
                 
               
               
