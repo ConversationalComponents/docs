@@ -6,7 +6,7 @@ nav:
     - Developers: tutorials/developer_videos.md
     - Vendors: tutorials/authors_videos.md
   - Tutorials:
-      - Incorporate a component to Dialogflow with fulfillment: tutorials/plug_coco_component_inside_dialogflow_conversation
+      - Incorporate a component to Dialogflow with fulfillment: tutorials/map_dialogFlow_intent_to_component
       - Add component to you ManyChat flow: tutorials/manychat1.md
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
       - Build a modular bot on wordpress: tutorials/wp_cocobot.md

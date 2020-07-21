@@ -10,13 +10,13 @@ Here's how the end result looks like:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9iGWVK7CcjQ" frameborder="0" allowfullscreen></iframe>
 
 
-### Steps:
+#### Steps:
 
-* Choose one or more relevant components, using Cocohub's Bot Studio editor.
+* Choose one or more relevant components, using CoCoHub's Bot Studio editor.
 * Create a new agent on CoCoHub's Dialogflow Service.
 * Import CoCo intent from dedicated ZIP (Available on agent tag from the step above).
-* Enable WebHook at the Fulfillment section and set the url to be the endpoint from the steps above.
-* Enable WebHook call on the target intent.
+* Enable webhook at the Fulfillment section and set the url to be the endpoint from the steps above.
+* Enable webhook call on the target intent.
 
 
 ## Get a component.
@@ -40,16 +40,16 @@ Here's how the end result looks like:
 * Press Import and choose the downloaded ZIP file.
 ![](./screenshots/map_dialogFlow_intent_to_component/4_Import_ZIP.png)
 
-## Enable WebHook at the Fulfillment Section
+## Enable webhook at the Fulfillment Section
 
 * Go to the Fulfillment section.                 
-* Press on enable WebHook.
+* Press on enable webhook.
 ![](./screenshots/map_dialogFlow_intent_to_component/5_Enable_Webhook.png)
 * Set the url to be the endpoint from the dialogflow CoCoHub's service.
 ![](./screenshots/map_dialogFlow_intent_to_component/6_Copy_Link.png)
 ![](./screenshots/map_dialogFlow_intent_to_component/7_Set_URL.png)
 
-## Enable WebHook call On The Target Intent.
+## Enable webhook call On The Target Intent.
 
 * Go to the target intent.
 * Scroll to the bottom and press on enable webhook call.
