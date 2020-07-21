@@ -26,7 +26,7 @@ As an example we'll create an Alexa Word Game Skill:
     * **Skill Invocation Name**: The phrase which will invoke the skill. e.g. Alexa, open Jeopardy
 ![](./screenshots/alexa_skill_from_scratch/3_Add_Skill_On_Service.png)
 
-## Configure Your Alexa Skill
+## Configure Your Alexa Skill (At the [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask "Alexa Developer Console"))
 * Place the generated endpoint url at the endpoint section.
 ![](./screenshots/alexa_skill_from_scratch/4_Configure_Endpoint.png)
 * Upload the Skill JSON Editor.(Intents -> JSON Editor)
