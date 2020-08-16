@@ -11,6 +11,7 @@ nav:
       - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
       - Build a modular bot on wordpress: tutorials/wp_cocobot.md
       - Alexa skill from scratch: tutorials/alexa_skill_from_scratch.md
+      - Connect your component to facebook: tutorials/facebook_channel.md
   - Concepts:
 #      - Agents, Goals, State, and Actions: concepts/goals.md
       - Conversational Component: concepts/convcomp.md
