@@ -15,7 +15,7 @@ As an example we'll create an Alexa Word Game Skill:
 
 
 ## Create Alexa Skill On Alexa Skill Service
-* Press "Channels" on the up bar.
+* Press "Channels" on the app-bar.
 * Choose "Alexa".
 * Fill in the following fields:
     * **Polly Voice ID**: The voice which the skill will use. Here are the available voices: [Available Voices](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html "Available Voices").
@@ -30,4 +30,3 @@ As an example we'll create an Alexa Word Game Skill:
 ![](./screenshots/alexa_skill_from_scratch/3__Configure_Endpoint.png)
 * Upload the Skill JSON Editor.(Intents -> JSON Editor)
 ![](./screenshots/alexa_skill_from_scratch/4__Configure_NLU.png)
-
