@@ -1,0 +1,2418 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>CCML - CoCoHub Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-143011310-6","docs.conversationalcomponents.com"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ccml-coco-speech-synthesis-markup-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="CoCoHub Docs" class="md-header-nav__button md-logo" aria-label="CoCoHub Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            CoCoHub Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              CCML
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/conversationalcomponents/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CoCoHub Docs" class="md-nav__button md-logo" aria-label="CoCoHub Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CoCoHub Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/conversationalcomponents/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Video Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Video Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Video Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/videos/" title="CoCoHub" class="md-nav__link">
+      CoCoHub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/developer_videos/" title="Developers" class="md-nav__link">
+      Developers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/authors_videos/" title="Vendors" class="md-nav__link">
+      Vendors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/map_dialogFlow_intent_to_component" title="Incorporate a component to Dialogflow with fulfillment" class="md-nav__link">
+      Incorporate a component to Dialogflow with fulfillment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/manychat1/" title="Add component to you ManyChat flow" class="md-nav__link">
+      Add component to you ManyChat flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/use_a_component_with_dialogflow_external" title="Calling a CoCo from Dialogflow(externally)" class="md-nav__link">
+      Calling a CoCo from Dialogflow(externally)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/wp_cocobot/" title="Build a modular bot on wordpress" class="md-nav__link">
+      Build a modular bot on wordpress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/alexa_skill_from_scratch/" title="Alexa skill from scratch" class="md-nav__link">
+      Alexa skill from scratch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/facebook_channel/" title="Connect your component to facebook" class="md-nav__link">
+      Connect your component to facebook
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Concepts
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Concepts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../concepts/convcomp/" title="Conversational Component" class="md-nav__link">
+      Conversational Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../concepts/context/" title="Context" class="md-nav__link">
+      Context
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CCML
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="CCML" class="md-nav__link md-nav__link--active">
+      CCML
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    &lt;break&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;break&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#say-as" class="md-nav__link">
+    &lt;say-as&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;say-as&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_1" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_1" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    &lt;p&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;p&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_2" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    &lt;s&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;s&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_3" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prosody" class="md-nav__link">
+    &lt;prosody&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;prosody&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_4" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_2" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_4" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emphasis" class="md-nav__link">
+    &lt;emphasis&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;emphasis&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_5" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_3" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_5" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sub" class="md-nav__link">
+    &lt;sub&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;sub&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_6" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_4" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_6" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phoneme" class="md-nav__link">
+    &lt;phoneme&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;phoneme&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_7" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes-and-examples" class="md-nav__link">
+    Attributes and Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice" class="md-nav__link">
+    &lt;voice&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;voice&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_8" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_5" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_7" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    &lt;language&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;language&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_9" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_6" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_8" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-of-speech" class="md-nav__link">
+    &lt;part-of-speech&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;part-of-speech&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_10" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_7" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_9" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    &lt;domain&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;domain&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_11" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_8" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_10" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effect" class="md-nav__link">
+    &lt;effect&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;effect&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_12" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_9" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_11" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emotion" class="md-nav__link">
+    &lt;emotion&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;emotion&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_13" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_10" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_12" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speak" class="md-nav__link">
+    &lt;speak&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;speak&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_14" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_13" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    &lt;audio&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;audio&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_15" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_11" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_14" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mark" class="md-nav__link">
+    &lt;mark&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;mark&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_16" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_12" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_15" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media" class="md-nav__link">
+    &lt;media&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;media&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_17" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_13" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_16" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel" class="md-nav__link">
+    &lt;parallel&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;parallel&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_18" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_17" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequential" class="md-nav__link">
+    &lt;sequential&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;sequential&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_19" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_18" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Developers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developers" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SDKs/" title="SDKs" class="md-nav__link">
+      SDKs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Vendors
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vendors" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vendors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connectors/" title="Vendor Toolkits" class="md-nav__link">
+      Vendor Toolkits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vendor-guidelines/" title="Publishing guidelines" class="md-nav__link">
+      Publishing guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://cocohub.ai/docs" title="⬅️ API Specs" class="md-nav__link">
+      ⬅️ API Specs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://cocohub.ai/" title="⬅️ CoCoHub" class="md-nav__link">
+      ⬅️ CoCoHub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://a-i.com/" title="⬅️ About AI" class="md-nav__link">
+      ⬅️ About AI
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    &lt;break&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;break&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#say-as" class="md-nav__link">
+    &lt;say-as&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;say-as&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_1" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_1" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    &lt;p&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;p&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_2" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    &lt;s&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;s&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_3" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prosody" class="md-nav__link">
+    &lt;prosody&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;prosody&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_4" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_2" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_4" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emphasis" class="md-nav__link">
+    &lt;emphasis&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;emphasis&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_5" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_3" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_5" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sub" class="md-nav__link">
+    &lt;sub&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;sub&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_6" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_4" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_6" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phoneme" class="md-nav__link">
+    &lt;phoneme&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;phoneme&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_7" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes-and-examples" class="md-nav__link">
+    Attributes and Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice" class="md-nav__link">
+    &lt;voice&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;voice&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_8" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_5" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_7" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    &lt;language&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;language&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_9" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_6" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_8" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-of-speech" class="md-nav__link">
+    &lt;part-of-speech&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;part-of-speech&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_10" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_7" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_9" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain" class="md-nav__link">
+    &lt;domain&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;domain&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_11" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_8" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_10" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effect" class="md-nav__link">
+    &lt;effect&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;effect&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_12" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_9" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_11" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emotion" class="md-nav__link">
+    &lt;emotion&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;emotion&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_13" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_10" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_12" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speak" class="md-nav__link">
+    &lt;speak&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;speak&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_14" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_13" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    &lt;audio&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;audio&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_15" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_11" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_14" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mark" class="md-nav__link">
+    &lt;mark&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;mark&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_16" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_12" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_15" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media" class="md-nav__link">
+    &lt;media&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;media&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_17" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes_13" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_16" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel" class="md-nav__link">
+    &lt;parallel&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;parallel&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_18" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_17" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequential" class="md-nav__link">
+    &lt;sequential&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;sequential&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels-supported_19" class="md-nav__link">
+    Channels Supported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_18" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/conversationalcomponents/docs/edit/master/docs/CCML.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="ccml-coco-speech-synthesis-markup-language">CCML =&gt; CoCo Speech Synthesis Markup Language</h1>
+<p>A cross platform speech synthesis markup language.</p>
+<h3 id="break">&lt;break&gt;</h3>
+<p>Set pause at the conversation.</p>
+<h6 id="channels-supported">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes">Attributes</h6>
+<ul>
+<li>
+<p>strength -</p>
+<ul>
+<li>none: Remove a pause.</li>
+<li>x-weak: Remove a pause same as none.</li>
+<li>weak: Treat adjacent words as if separated by a single comma (equivalent to medium).</li>
+<li>medium: Treat adjacent words as if separated by a single comma.</li>
+<li>strong: Make a sentence break.</li>
+<li>x-strong: Make a paragraph break.</li>
+</ul>
+</li>
+<li>
+<p>time - Sets the length of the break by seconds or milliseconds (e.g. "3s" or "250ms").</p>
+</li>
+</ul>
+<h6 id="example">Example</h6>
+<p>Lakritz is tasty &lt;break time="3s"/&gt; Nooot!</p>
+<h3 id="say-as">&lt;say-as&gt;</h3>
+<p>The tag lets you indicate information about the type of text construct that is contained within the tag.</p>
+<h6 id="channels-supported_1">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_1">Attributes</h6>
+<ul>
+<li>interpret-as -<ul>
+<li>characters, spell-out: Spell out each letter.</li>
+<li>cardinal, number: Interpret the value as a cardinal number.</li>
+<li>ordinal: Interpret the value as an ordinal number.</li>
+<li>fraction: Interpret the value as a fraction. This works for both common fractions (such as 3/20) and mixed fractions (such as 1+1/2).</li>
+<li>unit: Interpret a value as a measurement. The value should be either a number or fraction followed by a unit (with no space in between) or just a unit.</li>
+<li>date: Interpret the value as a date. Specify the format with the format attribute.</li>
+<li>time: Interpret a value such as 1'21" as duration in minutes and seconds.</li>
+<li>telephone: Interpret a value as a 7-digit or 10-digit telephone number. This can also handle extensions (for example, 2025551212x345).</li>
+<li>expletive: "Bleep" out the content inside the tag.</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_1">Example</h6>
+<p>&lt;say-as interpret-as="cardinal"&gt;12345&lt;/say-as&gt;</p>
+<h3 id="p">&lt;p&gt;</h3>
+<p>Represents a paragraph in speech.</p>
+<h6 id="channels-supported_2">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="example_2">Example</h6>
+<p>&lt;p&gt;This is the first paragraph.&lt;/p&gt;
+&lt;p&gt;This is the second paragraph.&lt;/p&gt;</p>
+<h3 id="s">&lt;s&gt;</h3>
+<p>Represents a sentence in speech.</p>
+<h6 id="channels-supported_3">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="example_3">Example</h6>
+<p>&lt;s&gt;This is the first sentence.&lt;/s&gt;
+&lt;s&gt;This is the second sentence.&lt;/s&gt;</p>
+<h3 id="prosody">&lt;prosody&gt;</h3>
+<p>Used to customize the pitch, speaking rate, and volume of text contained by the element.</p>
+<h6 id="channels-supported_4">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_2">Attributes</h6>
+<ul>
+<li>
+<p>rate - Modify the rate of the speech -</p>
+<ul>
+<li>slow</li>
+<li>medium</li>
+<li>fast</li>
+</ul>
+</li>
+<li>
+<p>pitch - Raise or lower the tone (pitch) of the speech -</p>
+<ul>
+<li>slow</li>
+<li>medium</li>
+<li>fast</li>
+</ul>
+</li>
+<li>
+<p>volume - Change the volume for the speech -</p>
+<ul>
+<li>silent</li>
+<li>x-soft</li>
+<li>soft</li>
+<li>medium</li>
+<li>loud</li>
+<li>x-loud</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_4">Example</h6>
+<p>&lt;prosody volume="x-loud"&gt;Louder volume for this sentence.&lt;/prosody&gt;.
+&lt;prosody rate="slow"&gt;I speak quite slowly&lt;/prosody&gt;.</p>
+<h3 id="emphasis">&lt;emphasis&gt;</h3>
+<p>Emphasis changes rate and volume of the speech. More emphasis is spoken louder and slower. Less emphasis is quieter and faster.</p>
+<h6 id="channels-supported_5">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_3">Attributes</h6>
+<ul>
+<li>level -<ul>
+<li>strong: Increase the volume and slow down the speaking rate so the speech is louder and slower.</li>
+<li>moderate: Increase the volume and slow down the speaking rate, but not as much as when set to strong. This is used as a default if level is not provided.</li>
+<li>reduced: Decrease the volume and speed up the speaking rate. The speech is softer and faster.</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_5">Example</h6>
+<p>Hey you, &lt;emphasis level="strong"&gt;come here!&lt;/emphasis&gt;</p>
+<h3 id="sub">&lt;sub&gt;</h3>
+<p>Indicate that the text in the alias attribute value replaces the contained text for pronunciation.</p>
+<h6 id="channels-supported_6">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_4">Attributes</h6>
+<ul>
+<li>alias - The word or phrase to speak in place of the tagged text.</li>
+</ul>
+<h6 id="example_6">Example</h6>
+<p>&lt;sub alias="Speech Synthesis Markup Language"&gt;ssml&lt;/sub&gt;</p>
+<h3 id="phoneme">&lt;phoneme&gt;</h3>
+<p>Provides a phonemic/phonetic pronunciation for the contained text. People may pronounce some words differently.</p>
+<h6 id="channels-supported_7">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes-and-examples">Attributes and Examples</h6>
+<p><a href="https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#phoneme">Amazon Alexa phoneme tag description</a></p>
+<h3 id="voice">&lt;voice&gt;</h3>
+<p>Use the voice tag to speak the text with the specified Amazon Polly voice.</p>
+<h6 id="channels-supported_8">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_5">Attributes</h6>
+<ul>
+<li>name - Polly voice ID (<a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">List of voice IDs</a>)</li>
+</ul>
+<h6 id="example_7">Example</h6>
+<p>&lt;voice name="Amy"&gt;My name is Amy, darling.&lt;/voice&gt;.</p>
+<h3 id="language">&lt;language&gt;</h3>
+<p>Use language to specify the language model and rules to speak the tagged content as if it were written in the language specified by the xml:lang attribute.</p>
+<h6 id="channels-supported_9">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_6">Attributes</h6>
+<ul>
+<li>xml:lang -<ul>
+<li>de-DE</li>
+<li>en-AU</li>
+<li>en-CA</li>
+<li>en-GB</li>
+<li>en-IN</li>
+<li>en-US</li>
+<li>es-ES</li>
+<li>es-MX</li>
+<li>es-US</li>
+<li>fr-CA</li>
+<li>fr-FR</li>
+<li>hi-IN</li>
+<li>it-IT</li>
+<li>ja-JP</li>
+<li>pt-BR</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_8">Example</h6>
+<p>&lt;language xml:lang="fr-FR"&gt;J'adore chanter&lt;/language&gt;</p>
+<h3 id="part-of-speech">&lt;part-of-speech&gt;</h3>
+<p>Similar to say-as, this tag customizes the pronunciation of words by specifying the word's part of speech.</p>
+<h6 id="channels-supported_10">Channels Supported</h6>
+<ul>
+<li>Phone</li>
+<li>Amazon Alexa</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_7">Attributes</h6>
+<ul>
+<li>role -<ul>
+<li>amazon:VB: Interpret the word as a verb (present simple).</li>
+<li>amazon:VBD: Interpret the word as a past participle.</li>
+<li>amazon:NN: Interpret the word as a noun.</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_9">Example</h6>
+<p>I really like to &lt;part-of-speech role="amazon:VB"&gt;eat&lt;/part-of-speech&gt; pizza.</p>
+<h3 id="domain">&lt;domain&gt;</h3>
+<p>Applies different speaking styles to the speech. The styles are curated text-to-speech voices that use different variations of intonation, emphasis, pausing, and other techniques to match the speech to the content.</p>
+<h6 id="channels-supported_11">Channels Supported</h6>
+<ul>
+<li>Amazon Alexa</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_8">Attributes</h6>
+<ul>
+<li>name -<ul>
+<li>conversational – Style voices to sound more conversational and less formal, more like how people sound when they speak to friends and family. The conversational style is available in English (US), Italian (IT), and Japanese (JP) skills. You can also use this style with Amazon Polly voices. For Amazon Polly, conversational requires the &lt;voice&gt; tag and the Matthew or Joanna voices.</li>
+<li>long-form – Style the speech for long-form content such as podcasts, articles, and blogs. The long-form style can't be used with the voice tag. The long-form style is available in English (US) skills.</li>
+<li>music – Style the speech for talking about music, video, or other multi-media content. The music style can't be used with the voice tag. The music style is available in English (US), English (CA), and English (UK) skills.</li>
+<li>news – Style the speech similar to what you hear when listening to the news on the radio or television. The news style can be combined with the voice tag and the Matthew, Joanna, and Lupe voices. The news style is available in English (US) and English (AU) skills.</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_10">Example</h6>
+<p>&lt;domain name="news"&gt;
+Here are the latest new about conversational AI and voice.
+&lt;/domain&gt;</p>
+<h3 id="effect">&lt;effect&gt;</h3>
+<p>Applies specific effects to the speech.</p>
+<h6 id="channels-supported_12">Channels Supported</h6>
+<ul>
+<li>Amazon Alexa</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_9">Attributes</h6>
+<ul>
+<li>name -<ul>
+<li>whispered - Applies a whispering effect to the speech.</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_11">Example</h6>
+<p>&lt;effect name="whispered"&gt;I am whispering this.&lt;/effect&gt;</p>
+<h3 id="emotion">&lt;emotion&gt;</h3>
+<p>The emotion tag causes Alexa to express emotion when speaking.</p>
+<h6 id="channels-supported_13">Channels Supported</h6>
+<ul>
+<li>Amazon Alexa</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_10">Attributes</h6>
+<ul>
+<li>
+<p>name - The name of the emotion to apply to the speech. -</p>
+<ul>
+<li>excited</li>
+<li>disappointed</li>
+</ul>
+</li>
+<li>
+<p>intensity - The intensity or strength of the emotion to express. -</p>
+<ul>
+<li>low</li>
+<li>medium</li>
+<li>high</li>
+</ul>
+</li>
+</ul>
+<h6 id="example_12">Example</h6>
+<p>&lt;emotion name="excited" intensity="high"&gt;
+This is unbelievable!
+&lt;/emotion&gt;</p>
+<h3 id="speak">&lt;speak&gt;</h3>
+<p>This is the root element of an SSML document.</p>
+<h6 id="channels-supported_14">Channels Supported</h6>
+<ul>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="example_13">Example</h6>
+<p>&lt;speak&gt;
+SSML content
+&lt;/speak&gt;</p>
+<h3 id="audio">&lt;audio&gt;</h3>
+<p>The audio tag lets you provide the URL for an MP3 file that the service can play while rendering a response.</p>
+<h6 id="channels-supported_15">Channels Supported</h6>
+<ul>
+<li>Amazon Alexa</li>
+<li>Google Assistant</li>
+<li>ZOOM</li>
+</ul>
+<h6 id="attributes_11">Attributes</h6>
+<ul>
+<li>src - A URI referring to the audio media source. Supported protocol is https.</li>
+</ul>
+<h6 id="example_14">Example</h6>
+<p>&lt;audio src="https://some-url.com/soundfile.mp3" /&gt;</p>
+<h3 id="mark">&lt;mark&gt;</h3>
+<p>An empty element that places a marker into the text or tag sequence. It can be used to reference a specific location in the sequence or to insert a marker into an output stream for asynchronous notification.</p>
+<h6 id="channels-supported_16">Channels Supported</h6>
+<ul>
+<li>Google Assistant</li>
+</ul>
+<h6 id="attributes_12">Attributes</h6>
+<ul>
+<li>name - Mark name.</li>
+</ul>
+<h6 id="example_15">Example</h6>
+<p>Go from &lt;mark name="here"/&gt; here, to &lt;mark name="there"/&gt; there!</p>
+<h3 id="media">&lt;media&gt;</h3>
+<p>Represents a media layer within a &lt;parallel&gt; or &lt;sequential&gt; element. The allowed content of a &lt;media&gt; element is an SSML &lt;speak&gt; or &lt;audio&gt; element. The following table describes the valid attributes for a &lt;media&gt; element.</p>
+<h6 id="channels-supported_17">Channels Supported</h6>
+<ul>
+<li>Google Assistant</li>
+</ul>
+<h6 id="attributes_13">Attributes</h6>
+<ul>
+<li>xml:id - A unique XML identifier for this element. Encoded entities are not supported. The allowed identifier values match the regular expression "([-_#]|\p{L}|\p{D})+". See XML-ID for more information.</li>
+<li>begin - The beginning time for this media container. Ignored if this is the root media container element (treated the same as the default of "0"). See the Time specification section below for valid string values.</li>
+<li>end - A specification for the ending time for this media container. See the Time specification section below for valid string values.</li>
+<li>repeatCount - A Real Number specifying how many times to insert the media. Fractional repetitions aren't supported, so the value will be rounded to the nearest integer. Zero is not a valid value and is therefore treated as being unspecified and has the default value in that case.</li>
+<li>repeatDur - A TimeDesignation that is a limit on the duration of the inserted media. If the duration of the media is less than this value, then playback ends at that time.</li>
+<li>soundLevel - Adjust the sound level of the audio by soundLevel decibels. Maximum range is +/-40dB but actual range may be effectively less, and output quality may not yield good results over the entire range.</li>
+<li>fadeInDur - A TimeDesignation over which the media will fade in from silent to the optionally-specified soundLevel. If the duration of the media is less than this value, the media will be mid-fade in at the end of playback.</li>
+<li>fadeOutDur - A TimeDesignation over which the media will fade out from the optionally-specified soundLevel until it is silent. If the duration of the media is less than this value, the media will be mid-fade out at the beginning of playback.</li>
+</ul>
+<h6 id="example_16">Example</h6>
+<p>&lt;media xml:id="question" begin="0.5s"&gt;
+&lt;speak&gt;Who invented the Internet?&lt;/speak&gt;
+&lt;/media&gt;</p>
+<h3 id="parallel">&lt;parallel&gt;</h3>
+<p>A parallel media container that allows you to play multiple media elements at once. The only allowed content is a set of one or more &lt;parallel&gt;, &lt;sequential&gt;, and &lt;media&gt; elements. The order of the &lt;media&gt; elements is not significant.</p>
+<h6 id="channels-supported_18">Channels Supported</h6>
+<ul>
+<li>Google Assistant</li>
+</ul>
+<h6 id="example_17">Example</h6>
+<p>&lt;parallel&gt;
+&lt;media xml:id="question" begin="0.5s"&gt;
+&lt;speak&gt;Who invented the Internet?&lt;/speak&gt;
+&lt;/media&gt;
+&lt;media xml:id="answer" begin="question.end+2.0s"&gt;
+&lt;speak&gt;The Internet was invented by cats.&lt;/speak&gt;
+&lt;/media&gt;
+&lt;/parallel&gt;</p>
+<h3 id="sequential">&lt;sequential&gt;</h3>
+<p>A sequential media container that allows you to play media elements one after another. The only allowed content is a set of one or more &lt;sequential&gt;, &lt;parallel&gt;, and &lt;media&gt; elements. The order of the media elements is the order in which they are rendered.</p>
+<h6 id="channels-supported_19">Channels Supported</h6>
+<ul>
+<li>Google Assistant</li>
+</ul>
+<h6 id="example_18">Example</h6>
+<p>&lt;sequential&gt;
+&lt;media begin="0.5s"&gt;
+&lt;speak&gt;Who invented the Internet?&lt;/speak&gt;
+&lt;/media&gt;
+&lt;media begin="2.0s"&gt;
+&lt;speak&gt;The Internet was invented by cats.&lt;/speak&gt;
+&lt;/media&gt;
+&lt;/sequential&gt;</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../concepts/context/" title="Context" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Context
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../SDKs/" title="SDKs" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SDKs
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/conversationalcomponents" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://facebook.com/ConversationalComponents" target="_blank" rel="noopener" title="facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js_extra/luckyo.js"></script>
+      
+        <script src="../js_extra/gitter.js"></script>
+      
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js"></script>
+      
+    
+  </body>
+</html>
