@@ -2,378 +2,436 @@
 
 A cross platform speech synthesis markup language.
 
-##  Tags:
+### &lt;break>
 
-#### <break>
 Set pause at the conversation.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* Google Assistant  
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* strength -
-    * none: Remove a pause.
-    * x-weak: Remove a pause same as none.
-    * weak: Treat adjacent words as if separated by a single comma (equivalent to medium).
-    * medium: Treat adjacent words as if separated by a single comma.
-    * strong: Make a sentence break.
-    * x-strong: Make a paragraph break.
+-   Phone
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
-* time - Sets the length of the break by seconds or milliseconds (e.g. "3s" or "250ms").
+###### Attributes
 
-###### Example:
-Lakritz is tasty <break time="3s"/> Nooot!
+-   strength -
 
-#### <say-as>
+    -   none: Remove a pause.
+    -   x-weak: Remove a pause same as none.
+    -   weak: Treat adjacent words as if separated by a single comma (equivalent to medium).
+    -   medium: Treat adjacent words as if separated by a single comma.
+    -   strong: Make a sentence break.
+    -   x-strong: Make a paragraph break.
+
+-   time - Sets the length of the break by seconds or milliseconds (e.g. "3s" or "250ms").
+
+###### Example
+
+Lakritz is tasty &lt;break time="3s"/> Nooot!
+
+### &lt;say-as>
+
 The tag lets you indicate information about the type of text construct that is contained within the tag.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* Google Assistant
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* interpret-as -
-    * characters, spell-out: Spell out each letter.
-    * cardinal, number: Interpret the value as a cardinal number.
-    * ordinal: Interpret the value as an ordinal number.
-    * fraction: Interpret the value as a fraction. This works for both common fractions (such as 3/20) and mixed fractions (such as 1+1/2).
-    * unit: Interpret a value as a measurement. The value should be either a number or fraction followed by a unit (with no space in between) or just a unit.
-    * date: Interpret the value as a date. Specify the format with the format attribute.
-    * time: Interpret a value such as 1'21" as duration in minutes and seconds.
-    * telephone: Interpret a value as a 7-digit or 10-digit telephone number. This can also handle extensions (for example, 2025551212x345).
-    * expletive: "Bleep" out the content inside the tag.
+-   Phone
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
-###### Example:
- <say-as interpret-as="cardinal">12345</say-as>
+###### Attributes
 
-#### <p>
+-   interpret-as -
+    -   characters, spell-out: Spell out each letter.
+    -   cardinal, number: Interpret the value as a cardinal number.
+    -   ordinal: Interpret the value as an ordinal number.
+    -   fraction: Interpret the value as a fraction. This works for both common fractions (such as 3/20) and mixed fractions (such as 1+1/2).
+    -   unit: Interpret a value as a measurement. The value should be either a number or fraction followed by a unit (with no space in between) or just a unit.
+    -   date: Interpret the value as a date. Specify the format with the format attribute.
+    -   time: Interpret a value such as 1'21" as duration in minutes and seconds.
+    -   telephone: Interpret a value as a 7-digit or 10-digit telephone number. This can also handle extensions (for example, 2025551212x345).
+    -   expletive: "Bleep" out the content inside the tag.
+
+###### Example
+
+&lt;say-as interpret-as="cardinal">12345&lt;/say-as>
+
+### &lt;p>
 
 Represents a paragraph in speech.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* Google Assistant
-* ZOOM
+###### Channels Supported
 
-###### Example:
-<p>This is the first paragraph.</p>       
-<p>This is the second paragraph.</p>
+-   Phone
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
+###### Example
 
-#### <s>
+&lt;p>This is the first paragraph.&lt;/p>
+&lt;p>This is the second paragraph.&lt;/p>
+
+### &lt;s>
+
 Represents a sentence in speech.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* Google Assistant  
-* ZOOM
+###### Channels Supported
 
-###### Example:
-<s>This is the first sentence.</s>       
-<s>This is the second sentence.</s>
+-   Phone
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
-#### <prosody>
+###### Example
+
+&lt;s>This is the first sentence.&lt;/s>
+&lt;s>This is the second sentence.&lt;/s>
+
+### &lt;prosody>
 
 Used to customize the pitch, speaking rate, and volume of text contained by the element.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* Google Assistant
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* rate - Modify the rate of the speech -
-    * slow
-    * medium
-    * fast
+-   Phone
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
-* pitch - Raise or lower the tone (pitch) of the speech -
-     * slow
-    * medium
-    * fast
+###### Attributes
 
-* volume - Change the volume for the speech -
-    * silent
-    * x-soft
-    * soft
-    * medium
-    * loud
-    * x-loud
+-   rate - Modify the rate of the speech -
 
-###### Example:
-<prosody volume="x-loud">Louder volume for this sentence.</prosody>.
-<prosody rate="slow">I speak quite slowly</prosody>.
+    -   slow
+    -   medium
+    -   fast
 
+-   pitch - Raise or lower the tone (pitch) of the speech -
 
-#### <emphasis>
+    -   slow
+    -   medium
+    -   fast
+
+-   volume - Change the volume for the speech -
+    -   silent
+    -   x-soft
+    -   soft
+    -   medium
+    -   loud
+    -   x-loud
+
+###### Example
+
+&lt;prosody volume="x-loud">Louder volume for this sentence.&lt;/prosody>.
+&lt;prosody rate="slow">I speak quite slowly&lt;/prosody>.
+
+### &lt;emphasis>
 
 Emphasis changes rate and volume of the speech. More emphasis is spoken louder and slower. Less emphasis is quieter and faster.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* Google Assistant
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* level -
-    * strong: Increase the volume and slow down the speaking rate so the speech is louder and slower.
-    * moderate: Increase the volume and slow down the speaking rate, but not as much as when set to strong. This is used as a default if level is not provided.
-    * reduced: Decrease the volume and speed up the speaking rate. The speech is softer and faster.
+-   Phone
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
-###### Example:
-Hey you,  <emphasis level="strong">come here!</emphasis>
+###### Attributes
 
-#### <sub>
+-   level -
+    -   strong: Increase the volume and slow down the speaking rate so the speech is louder and slower.
+    -   moderate: Increase the volume and slow down the speaking rate, but not as much as when set to strong. This is used as a default if level is not provided.
+    -   reduced: Decrease the volume and speed up the speaking rate. The speech is softer and faster.
+
+###### Example
+
+Hey you, &lt;emphasis level="strong">come here!&lt;/emphasis>
+
+### &lt;sub>
+
 Indicate that the text in the alias attribute value replaces the contained text for pronunciation.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* Google Assistant
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* alias - The word or phrase to speak in place of the tagged text.
+-   Phone
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
-###### Example:
-<sub alias="Speech Synthesis Markup Language">ssml</sub>
+###### Attributes
 
-#### <phoneme>
+-   alias - The word or phrase to speak in place of the tagged text.
+
+###### Example
+
+&lt;sub alias="Speech Synthesis Markup Language">ssml&lt;/sub>
+
+### &lt;phoneme>
 
 Provides a phonemic/phonetic pronunciation for the contained text. People may pronounce some words differently.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* ZOOM
+###### Channels Supported
 
-###### Attributes and Examples:
+-   Phone
+-   Amazon Alexa
+-   ZOOM
+
+###### Attributes and Examples
+
 [Amazon Alexa phoneme tag description](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#phoneme)
 
-
-#### <voice>
+### &lt;voice>
 
 Use the voice tag to speak the text with the specified Amazon Polly voice.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* name - Polly voice ID ([List of voice IDs](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html))
+-   Phone
+-   Amazon Alexa
+-   ZOOM
 
-###### Example:
-<voice name="Amy">My name is Amy, darling.</voice>.
+###### Attributes
 
-#### <language>
+-   name - Polly voice ID ([List of voice IDs](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html))
+
+###### Example
+
+&lt;voice name="Amy">My name is Amy, darling.&lt;/voice>.
+
+### &lt;language>
 
 Use language to specify the language model and rules to speak the tagged content as if it were written in the language specified by the xml:lang attribute.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* xml:lang -
-    * de-DE
-    * en-AU
-    * en-CA
-    * en-GB
-    * en-IN
-    * en-US
-    * es-ES
-    * es-MX
-    * es-US
-    * fr-CA
-    * fr-FR
-    * hi-IN
-    * it-IT
-    * ja-JP
-    * pt-BR
+-   Phone
+-   Amazon Alexa
+-   ZOOM
 
-###### Example:
-<language xml:lang="fr-FR">J'adore chanter</language>
+###### Attributes
 
+-   xml:lang -
+    -   de-DE
+    -   en-AU
+    -   en-CA
+    -   en-GB
+    -   en-IN
+    -   en-US
+    -   es-ES
+    -   es-MX
+    -   es-US
+    -   fr-CA
+    -   fr-FR
+    -   hi-IN
+    -   it-IT
+    -   ja-JP
+    -   pt-BR
 
-#### <part-of-speech>
+###### Example
+
+&lt;language xml:lang="fr-FR">J'adore chanter&lt;/language>
+
+### &lt;part-of-speech>
 
 Similar to say-as, this tag customizes the pronunciation of words by specifying the word's part of speech.
 
-###### Channels Supported:
-* Phone
-* Amazon Alexa
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* role -
-    * amazon:VB: Interpret the word as a verb (present simple).
-    * amazon:VBD: Interpret the word as a past participle.
-    * amazon:NN: Interpret the word as a noun.
+-   Phone
+-   Amazon Alexa
+-   ZOOM
 
-###### Example:
-I really like to <part-of-speech role="amazon:VB">eat</part-of-speech> pizza.
+###### Attributes
 
-#### <domain>
+-   role -
+    -   amazon:VB: Interpret the word as a verb (present simple).
+    -   amazon:VBD: Interpret the word as a past participle.
+    -   amazon:NN: Interpret the word as a noun.
+
+###### Example
+
+I really like to &lt;part-of-speech role="amazon:VB">eat&lt;/part-of-speech> pizza.
+
+### &lt;domain>
 
 Applies different speaking styles to the speech. The styles are curated text-to-speech voices that use different variations of intonation, emphasis, pausing, and other techniques to match the speech to the content.
 
-###### Channels Supported:
-* Amazon Alexa
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* name -
-    * conversational – Style voices to sound more conversational and less formal, more like how people sound when they speak to friends and family. The conversational style is available in English (US), Italian (IT), and Japanese (JP) skills. You can also use this style with Amazon Polly voices. For Amazon Polly, conversational requires the <voice> tag and the Matthew or Joanna voices.
-    * long-form – Style the speech for long-form content such as podcasts, articles, and blogs. The long-form style can't be used with the voice tag. The long-form style is available in English (US) skills.
-    * music – Style the speech for talking about music, video, or other multi-media content. The music style can't be used with the voice tag. The music style is available in English (US), English (CA), and English (UK) skills.
-    * news – Style the speech similar to what you hear when listening to the news on the radio or television. The news style can be combined with the voice tag and the Matthew, Joanna, and Lupe voices. The news style is available in English (US) and English (AU) skills.
+-   Amazon Alexa
+-   ZOOM
 
-###### Example:
-<domain name="news">
-    Here are the latest new about conversational AI and voice.
-</domain>
+###### Attributes
 
-#### <effect>  
+-   name -
+    -   conversational – Style voices to sound more conversational and less formal, more like how people sound when they speak to friends and family. The conversational style is available in English (US), Italian (IT), and Japanese (JP) skills. You can also use this style with Amazon Polly voices. For Amazon Polly, conversational requires the &lt;voice> tag and the Matthew or Joanna voices.
+    -   long-form – Style the speech for long-form content such as podcasts, articles, and blogs. The long-form style can't be used with the voice tag. The long-form style is available in English (US) skills.
+    -   music – Style the speech for talking about music, video, or other multi-media content. The music style can't be used with the voice tag. The music style is available in English (US), English (CA), and English (UK) skills.
+    -   news – Style the speech similar to what you hear when listening to the news on the radio or television. The news style can be combined with the voice tag and the Matthew, Joanna, and Lupe voices. The news style is available in English (US) and English (AU) skills.
+
+###### Example
+
+&lt;domain name="news">
+Here are the latest new about conversational AI and voice.
+&lt;/domain>
+
+### &lt;effect>
 
 Applies specific effects to the speech.
 
-###### Channels Supported:
-* Amazon Alexa
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* name -
-    * whispered - Applies a whispering effect to the speech.
+-   Amazon Alexa
+-   ZOOM
 
-###### Example:
-<effect name="whispered">I am whispering this.</effect>
+###### Attributes
 
-#### <emotion>
+-   name -
+    -   whispered - Applies a whispering effect to the speech.
+
+###### Example
+
+&lt;effect name="whispered">I am whispering this.&lt;/effect>
+
+### &lt;emotion>
 
 The emotion tag causes Alexa to express emotion when speaking.
 
-###### Channels Supported:
-* Amazon Alexa
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* name - The name of the emotion to apply to the speech. -
-    * excited
-    * disappointed
+-   Amazon Alexa
+-   ZOOM
 
-* intensity - The intensity or strength of the emotion to express. -
-    * low
-    * medium
-    * high
+###### Attributes
 
-###### Example:
-<emotion name="excited" intensity="high">
-    This is unbelievable!
-</emotion>
+-   name - The name of the emotion to apply to the speech. -
 
-#### <speak>
+    -   excited
+    -   disappointed
+
+-   intensity - The intensity or strength of the emotion to express. -
+    -   low
+    -   medium
+    -   high
+
+###### Example
+
+&lt;emotion name="excited" intensity="high">
+This is unbelievable!
+&lt;/emotion>
+
+### &lt;speak>
+
 This is the root element of an SSML document.
 
-###### Channels Supported:
-* Amazon Alexa
-* Google Assistant
-* ZOOM
+###### Channels Supported
 
-###### Example:
-<speak>
-    SSML content
-</speak>
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
+###### Example
 
-#### <audio>
+&lt;speak>
+SSML content
+&lt;/speak>
+
+### &lt;audio>
+
 The audio tag lets you provide the URL for an MP3 file that the service can play while rendering a response.
 
-###### Channels Supported:
-* Amazon Alexa
-* Google Assistant
-* ZOOM
+###### Channels Supported
 
-###### Attributes:
-* src - A URI referring to the audio media source. Supported protocol is https.
+-   Amazon Alexa
+-   Google Assistant
+-   ZOOM
 
-###### Example:
- <audio src="https://some-url.com/soundfile.mp3" />
+###### Attributes
 
-#### <mark>
+-   src - A URI referring to the audio media source. Supported protocol is https.
+
+###### Example
+
+&lt;audio src="https://some-url.com/soundfile.mp3" />
+
+### &lt;mark>
 
 An empty element that places a marker into the text or tag sequence. It can be used to reference a specific location in the sequence or to insert a marker into an output stream for asynchronous notification.
 
-###### Channels Supported:
-* Google Assistant
+###### Channels Supported
 
-###### Attributes:
-* name - Mark name.
+-   Google Assistant
 
-###### Example:
-Go from <mark name="here"/> here, to <mark name="there"/> there!
+###### Attributes
 
-#### <media>
+-   name - Mark name.
 
-Represents a media layer within a <parallel> or <sequential> element. The allowed content of a <media> element is an SSML <speak> or <audio> element. The following table describes the valid attributes for a <media> element.
+###### Example
 
-###### Channels Supported:
-* Google Assistant
+Go from &lt;mark name="here"/> here, to &lt;mark name="there"/> there!
 
-###### Attributes:
-* xml:id - A unique XML identifier for this element. Encoded entities are not supported. The allowed identifier values match the regular expression "([-_#]|\p{L}|\p{D})+". See XML-ID for more information.
-* begin - The beginning time for this media container. Ignored if this is the root media container element (treated the same as the default of "0"). See the Time specification section below for valid string values.
-* end - A specification for the ending time for this media container. See the Time specification section below for valid string values.
-* repeatCount - A Real Number specifying how many times to insert the media. Fractional repetitions aren't supported, so the value will be rounded to the nearest integer. Zero is not a valid value and is therefore treated as being unspecified and has the default value in that case.
-* repeatDur - A TimeDesignation that is a limit on the duration of the inserted media. If the duration of the media is less than this value, then playback ends at that time.
-* soundLevel - 	Adjust the sound level of the audio by soundLevel decibels. Maximum range is +/-40dB but actual range may be effectively less, and output quality may not yield good results over the entire range.
-* fadeInDur - A TimeDesignation over which the media will fade in from silent to the optionally-specified soundLevel. If the duration of the media is less than this value, the media will be mid-fade in at the end of playback.
-* fadeOutDur - 	A TimeDesignation over which the media will fade out from the optionally-specified soundLevel until it is silent. If the duration of the media is less than this value, the media will be mid-fade out at the beginning of playback.
+### &lt;media>
 
-###### Example:
-<media xml:id="question" begin="0.5s">
-  <speak>Who invented the Internet?</speak>
-</media>
+Represents a media layer within a &lt;parallel> or &lt;sequential> element. The allowed content of a &lt;media> element is an SSML &lt;speak> or &lt;audio> element. The following table describes the valid attributes for a &lt;media> element.
 
-#### <parallel>
-A parallel media container that allows you to play multiple media elements at once. The only allowed content is a set of one or more <parallel>, <sequential>, and <media> elements. The order of the <media> elements is not significant.
+###### Channels Supported
 
-###### Channels Supported:
-* Google Assistant
+-   Google Assistant
 
-###### Example:
-  <parallel>
-    <media xml:id="question" begin="0.5s">
-      <speak>Who invented the Internet?</speak>
-    </media>
-    <media xml:id="answer" begin="question.end+2.0s">
-      <speak>The Internet was invented by cats.</speak>
-    </media>
-  </parallel>
+###### Attributes
 
-#### <sequential>
-A sequential media container that allows you to play media elements one after another. The only allowed content is a set of one or more <sequential>, <parallel>, and <media> elements. The order of the media elements is the order in which they are rendered.
+-   xml:id - A unique XML identifier for this element. Encoded entities are not supported. The allowed identifier values match the regular expression "([-_#]|\p{L}|\p{D})+". See XML-ID for more information.
+-   begin - The beginning time for this media container. Ignored if this is the root media container element (treated the same as the default of "0"). See the Time specification section below for valid string values.
+-   end - A specification for the ending time for this media container. See the Time specification section below for valid string values.
+-   repeatCount - A Real Number specifying how many times to insert the media. Fractional repetitions aren't supported, so the value will be rounded to the nearest integer. Zero is not a valid value and is therefore treated as being unspecified and has the default value in that case.
+-   repeatDur - A TimeDesignation that is a limit on the duration of the inserted media. If the duration of the media is less than this value, then playback ends at that time.
+-   soundLevel - Adjust the sound level of the audio by soundLevel decibels. Maximum range is +/-40dB but actual range may be effectively less, and output quality may not yield good results over the entire range.
+-   fadeInDur - A TimeDesignation over which the media will fade in from silent to the optionally-specified soundLevel. If the duration of the media is less than this value, the media will be mid-fade in at the end of playback.
+-   fadeOutDur - A TimeDesignation over which the media will fade out from the optionally-specified soundLevel until it is silent. If the duration of the media is less than this value, the media will be mid-fade out at the beginning of playback.
 
-###### Channels Supported:
-* Google Assistant
+###### Example
 
+&lt;media xml:id="question" begin="0.5s">
+&lt;speak>Who invented the Internet?&lt;/speak>
+&lt;/media>
 
-###### Example:
-  <sequential>
-    <media begin="0.5s">
-      <speak>Who invented the Internet?</speak>
-    </media>
-    <media begin="2.0s">
-      <speak>The Internet was invented by cats.</speak>
-    </media>
-  </sequential>
+### &lt;parallel>
+
+A parallel media container that allows you to play multiple media elements at once. The only allowed content is a set of one or more &lt;parallel>, &lt;sequential>, and &lt;media> elements. The order of the &lt;media> elements is not significant.
+
+###### Channels Supported
+
+-   Google Assistant
+
+###### Example
+
+&lt;parallel>
+&lt;media xml:id="question" begin="0.5s">
+&lt;speak>Who invented the Internet?&lt;/speak>
+&lt;/media>
+&lt;media xml:id="answer" begin="question.end+2.0s">
+&lt;speak>The Internet was invented by cats.&lt;/speak>
+&lt;/media>
+&lt;/parallel>
+
+### &lt;sequential>
+
+A sequential media container that allows you to play media elements one after another. The only allowed content is a set of one or more &lt;sequential>, &lt;parallel>, and &lt;media> elements. The order of the media elements is the order in which they are rendered.
+
+###### Channels Supported
+
+-   Google Assistant
+
+###### Example
+
+&lt;sequential>
+&lt;media begin="0.5s">
+&lt;speak>Who invented the Internet?&lt;/speak>
+&lt;/media>
+&lt;media begin="2.0s">
+&lt;speak>The Internet was invented by cats.&lt;/speak>
+&lt;/media>
+&lt;/sequential>

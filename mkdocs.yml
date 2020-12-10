@@ -1,54 +1,54 @@
 site_name: CoCoHub Docs
 nav:
-  - About: index.md
-  - Video Guides:
-    - CoCoHub: tutorials/videos.md
-    - Developers: tutorials/developer_videos.md
-    - Vendors: tutorials/authors_videos.md
-  - Tutorials:
-      - Incorporate a component to Dialogflow with fulfillment: tutorials/map_dialogFlow_intent_to_component
-      - Add component to you ManyChat flow: tutorials/manychat1.md
-      - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
-      - Build a modular bot on wordpress: tutorials/wp_cocobot.md
-      - Alexa skill from scratch: tutorials/alexa_skill_from_scratch.md
-      - Connect your component to facebook: tutorials/facebook_channel.md
-  - Concepts:
-#      - Agents, Goals, State, and Actions: concepts/goals.md
-      - Conversational Component: concepts/convcomp.md
-      - Context: concepts/context.md
-  - Developers:
-    - SDKs: SDKs.md
-  - Vendors:
-    - Vendor Toolkits: connectors.md
-    - Publishing guidelines: vendor-guidelines.md
-  - ⬅️ API Specs: https://cocohub.ai/docs
-  - ⬅️ CoCoHub: https://cocohub.ai/
-  - ⬅️ About AI: https://a-i.com/
+    - About: index.md
+    - Video Guides:
+          - CoCoHub: tutorials/videos.md
+          - Developers: tutorials/developer_videos.md
+          - Vendors: tutorials/authors_videos.md
+    - Tutorials:
+          - Incorporate a component to Dialogflow with fulfillment: tutorials/map_dialogFlow_intent_to_component
+          - Add component to you ManyChat flow: tutorials/manychat1.md
+          - Calling a CoCo from Dialogflow(externally): tutorials/use_a_component_with_dialogflow_external
+          - Build a modular bot on wordpress: tutorials/wp_cocobot.md
+          - Alexa skill from scratch: tutorials/alexa_skill_from_scratch.md
+          - Connect your component to facebook: tutorials/facebook_channel.md
+    - Concepts:
+          #      - Agents, Goals, State, and Actions: concepts/goals.md
+          - Conversational Component: concepts/convcomp.md
+          - Context: concepts/context.md
+          - CCML: CCML.md
+    - Developers:
+          - SDKs: SDKs.md
+    - Vendors:
+          - Vendor Toolkits: connectors.md
+          - Publishing guidelines: vendor-guidelines.md
+    - ⬅️ API Specs: https://cocohub.ai/docs
+    - ⬅️ CoCoHub: https://cocohub.ai/
+    - ⬅️ About AI: https://a-i.com/
 
-repo_url: 'https://github.com/conversationalcomponents/docs'
+repo_url: "https://github.com/conversationalcomponents/docs"
 
 theme:
-  name: material
-  palette:
-    primary: blue
-    accent: blue
-    #logo: cocohub logo-09.svg
+    name: material
+    palette:
+        primary: blue
+        accent: blue
+        #logo: cocohub logo-09.svg
 
 markdown_extensions:
-  - codehilite
-  - admonition
+    - codehilite
+    - admonition
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: 'https://github.com/conversationalcomponents'
-    - icon: fontawesome/brands/facebook
-      link: 'https://facebook.com/ConversationalComponents'
+    social:
+        - icon: fontawesome/brands/github
+          link: "https://github.com/conversationalcomponents"
+        - icon: fontawesome/brands/facebook
+          link: "https://facebook.com/ConversationalComponents"
 
-
-google_analytics: ['UA-143011310-6', 'docs.conversationalcomponents.com']
+google_analytics: ["UA-143011310-6", "docs.conversationalcomponents.com"]
 
 extra_javascript:
-  - js_extra/luckyo.js
-  - js_extra/gitter.js
-  - https://sidecar.gitter.im/dist/sidecar.v1.js
+    - js_extra/luckyo.js
+    - js_extra/gitter.js
+    - https://sidecar.gitter.im/dist/sidecar.v1.js
