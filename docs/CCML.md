@@ -7,10 +7,11 @@ A cross platform speech synthesis markup language.
 #### <break>
 Set pause at the conversation.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
 * Google Assistant  
+* ZOOM
 
 ###### Attributes:
 * strength -
@@ -29,10 +30,11 @@ Lakritz is tasty <break time="3s"/> Nooot!
 #### <say-as>
 The tag lets you indicate information about the type of text construct that is contained within the tag.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
-* Google Assistant  
+* Google Assistant
+* ZOOM
 
 ###### Attributes:
 * interpret-as -
@@ -53,10 +55,11 @@ The tag lets you indicate information about the type of text construct that is c
 
 Represents a paragraph in speech.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
 * Google Assistant
+* ZOOM
 
 ###### Example:
 <p>This is the first paragraph.</p>       
@@ -66,10 +69,11 @@ Represents a paragraph in speech.
 #### <s>
 Represents a sentence in speech.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
 * Google Assistant  
+* ZOOM
 
 ###### Example:
 <s>This is the first sentence.</s>       
@@ -79,10 +83,11 @@ Represents a sentence in speech.
 
 Used to customize the pitch, speaking rate, and volume of text contained by the element.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
-* Google Assistant  
+* Google Assistant
+* ZOOM
 
 ###### Attributes:
 * rate - Modify the rate of the speech -
@@ -112,10 +117,11 @@ Used to customize the pitch, speaking rate, and volume of text contained by the 
 
 Emphasis changes rate and volume of the speech. More emphasis is spoken louder and slower. Less emphasis is quieter and faster.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
 * Google Assistant
+* ZOOM
 
 ###### Attributes:
 * level -
@@ -129,10 +135,11 @@ Hey you,  <emphasis level="strong">come here!</emphasis>
 #### <sub>
 Indicate that the text in the alias attribute value replaces the contained text for pronunciation.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
 * Google Assistant
+* ZOOM
 
 ###### Attributes:
 * alias - The word or phrase to speak in place of the tagged text.
@@ -144,9 +151,10 @@ Indicate that the text in the alias attribute value replaces the contained text 
 
 Provides a phonemic/phonetic pronunciation for the contained text. People may pronounce some words differently.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
+* ZOOM
 
 ###### Attributes and Examples:
 [Amazon Alexa phoneme tag description](https://developer.amazon.com/en-US/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#phoneme)
@@ -156,9 +164,10 @@ Provides a phonemic/phonetic pronunciation for the contained text. People may pr
 
 Use the voice tag to speak the text with the specified Amazon Polly voice.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
+* ZOOM
 
 ###### Attributes:
 * name - Polly voice ID ([List of voice IDs](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html))
@@ -170,9 +179,10 @@ Use the voice tag to speak the text with the specified Amazon Polly voice.
 
 Use language to specify the language model and rules to speak the tagged content as if it were written in the language specified by the xml:lang attribute.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
+* ZOOM
 
 ###### Attributes:
 * xml:lang -
@@ -200,9 +210,10 @@ Use language to specify the language model and rules to speak the tagged content
 
 Similar to say-as, this tag customizes the pronunciation of words by specifying the word's part of speech.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Phone
 * Amazon Alexa
+* ZOOM
 
 ###### Attributes:
 * role -
@@ -217,8 +228,9 @@ I really like to <part-of-speech role="amazon:VB">eat</part-of-speech> pizza.
 
 Applies different speaking styles to the speech. The styles are curated text-to-speech voices that use different variations of intonation, emphasis, pausing, and other techniques to match the speech to the content.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Amazon Alexa
+* ZOOM
 
 ###### Attributes:
 * name -
@@ -236,8 +248,9 @@ Applies different speaking styles to the speech. The styles are curated text-to-
 
 Applies specific effects to the speech.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Amazon Alexa
+* ZOOM
 
 ###### Attributes:
 * name -
@@ -250,8 +263,9 @@ Applies specific effects to the speech.
 
 The emotion tag causes Alexa to express emotion when speaking.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Amazon Alexa
+* ZOOM
 
 ###### Attributes:
 * name - The name of the emotion to apply to the speech. -
@@ -271,9 +285,10 @@ The emotion tag causes Alexa to express emotion when speaking.
 #### <speak>
 This is the root element of an SSML document.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Amazon Alexa
 * Google Assistant
+* ZOOM
 
 ###### Example:
 <speak>
@@ -284,9 +299,10 @@ This is the root element of an SSML document.
 #### <audio>
 The audio tag lets you provide the URL for an MP3 file that the service can play while rendering a response.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Amazon Alexa
 * Google Assistant
+* ZOOM
 
 ###### Attributes:
 * src - A URI referring to the audio media source. Supported protocol is https.
@@ -298,7 +314,7 @@ The audio tag lets you provide the URL for an MP3 file that the service can play
 
 An empty element that places a marker into the text or tag sequence. It can be used to reference a specific location in the sequence or to insert a marker into an output stream for asynchronous notification.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Google Assistant
 
 ###### Attributes:
@@ -311,7 +327,7 @@ Go from <mark name="here"/> here, to <mark name="there"/> there!
 
 Represents a media layer within a <parallel> or <sequential> element. The allowed content of a <media> element is an SSML <speak> or <audio> element. The following table describes the valid attributes for a <media> element.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Google Assistant
 
 ###### Attributes:
@@ -332,7 +348,7 @@ Represents a media layer within a <parallel> or <sequential> element. The allowe
 #### <parallel>
 A parallel media container that allows you to play multiple media elements at once. The only allowed content is a set of one or more <parallel>, <sequential>, and <media> elements. The order of the <media> elements is not significant.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Google Assistant
 
 ###### Example:
@@ -348,7 +364,7 @@ A parallel media container that allows you to play multiple media elements at on
 #### <sequential>
 A sequential media container that allows you to play media elements one after another. The only allowed content is a set of one or more <sequential>, <parallel>, and <media> elements. The order of the media elements is the order in which they are rendered.
 
-###### Channels Supporting:
+###### Channels Supported:
 * Google Assistant
 
 
