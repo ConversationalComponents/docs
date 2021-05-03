@@ -1,10 +1,10 @@
 site_name: CoCoHub Docs
 nav:
     - About: index.md
-    - Video Guides:
-          - CoCoHub: tutorials/videos.md
-          - Developers: tutorials/developer_videos.md
-          - Vendors: tutorials/authors_videos.md
+    #     - Video Guides:
+    #           - CoCoHub: tutorials/videos.md
+    #           - Developers: tutorials/developer_videos.md
+    #           - Vendors: tutorials/authors_videos.md
     - Tutorials:
           - Incorporate a component to Dialogflow with fulfillment: tutorials/map_dialogFlow_intent_to_component
           - Add component to you ManyChat flow: tutorials/manychat1.md
@@ -14,13 +14,32 @@ nav:
           - Connect your component to facebook: tutorials/facebook_channel.md
     - Concepts:
           #      - Agents, Goals, State, and Actions: concepts/goals.md
-          - Conversational Component: concepts/convcomp.md
-          - Context: concepts/context.md
-          - CCML: CCML.md
-    - Developers:
-          - SDKs: SDKs.md
+          - General: concepts/index.md
+          - Deep Dive:
+                - Conversational Component: concepts/convcomp.md
+                - Context: concepts/context.md
+    - How To's:
+          - Navigate based on user's input: howtos/navigation.md
+          - Build and use sub components: howtos/sub-comps.md
+          - Analyze Logs: howtos/analyze-logs.md
+          - Customize components: howtos/customize-comp.md
+          - Use Parameters: howtos/parameters.md
+          - Play audio files: howtos/audiofiles.md
+          - Connect a dialogflow agent to a face: howtos/dialogflow-video.md
+          - Channels:
+                - Publish to Zoom: howtos/channels/zoom.md
+                - Publish to Phone: howtos/channels/phone.md
+                - Publish to Facebook: howtos/channels/facebook.md
+                - Publish to Telegram: howtos/channels/telegram.md
+                - Publish to Alexa: howtos/channels/alexa.md
+                - Publish to Wordpress Website: howtos/channels/wordpress.md
+                - Publish to Website: howtos/channels/website.md
+                - Publish to Audiocodes: howtos/channels/audiocodes.md
+    - CCML: CCML.md
+    #- Developers:
+    #      - SDKs: SDKs.md
     - Vendors:
-          - Vendor Toolkits: connectors.md
+          #- Vendor Toolkits: connectors.md
           - Publishing guidelines: vendor-guidelines.md
     - ⬅️ API Specs: https://cocohub.ai/docs
     - ⬅️ CoCoHub: https://cocohub.ai/
