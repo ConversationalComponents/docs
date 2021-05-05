@@ -14,7 +14,7 @@ We all have dialogs during our lives, right? Some of us even built bots on a pla
 
 5. Click on the three dots on the right of the same row, then click on **Manage Keys **in the drill-down menu.
 
-6. Click on **Add Key**, then pick **Create new key** \
+6. Click on **Add Key**, then pick **Create new key**
 
 7. Pick **Json**, then **Create**
 
