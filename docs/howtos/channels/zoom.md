@@ -22,7 +22,7 @@ In the past year, one video communication platform Zoom-ed into our lives. You c
     7. Choose a sleep phrase (same here. At least one). This is what you’ll say to end the conversation with the bot. Same rules apply here, so keep it short and sweet, with NO punctuation
 
 5.  Click “Save”
-6.  Now, you have 2 options: \
+6.  Now, you have 2 options:
 7.  Click on “Invite bot now”. This will take you to an email, where you’ll need to paste your Zoom call invite (So - open Zoom, create invite and paste in the email). You can invite your bot to a scheduled call, or an active call, going on right now. \
     **Or**
 
