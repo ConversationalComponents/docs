@@ -8,27 +8,21 @@ Our role, as conversation designers, is to smoothly lead the user into saying wh
 
 ![alt_text](nav2.png "image_tooltip")
 
-Navigation nodes can be operated in two ways: Intents and Keywords.
+Click “Add an intent” and a menu will pop up. Now you can search for intents, or create ones for yourself
 
-## 2. 1. Intents
+## 2. 1. Find an existing intent
+
+- Type your desired intent in the search window, or
+- Scroll down and up, up and down, until you find something fitting. 
+
+Once you hover with the mouse over the intent, you’ll see what it does and some examples of relevant inputs. 
+Now, by clicking on the eye button, you can get inside and see the complete variety of phrases and utterances.
 
 So, intents are collections of semantically similar utterances that basically mean the same thing in a conversation. For example, “Yes” is a word, but “Yeah!”, “Sure”, “YESSS” and “Yup” also mean the same thing, and we should embrace them as well.
 
-On CoCoHub’s studio, we have 5 intents - click on the needed one
+We've created dozens of intents that can help any individual, business and company and can expect most things the users will say.
 
-Yes - the user answers in a positive way
-
-No - the user answers in a negative way
-
-![alt_text](nav1.png "image_tooltip")
-
-Continue - the user asks the chatbot to go on
-
-Stop - the user asks the chatbot to abort the conversation
-
-![alt_text](nav7.png "image_tooltip")
-
-Wildcard - an option in which every input by the user is valid, and yields the same response. What is it good for? Here are two examples:
+In addition, we give "Anything Else" which leads to a general fallback - what your bot will answer if the user don't say anything you prepared for.
 
 -   When you need the user’s opinion or answer for data-collection purposes - and the scope of answers is too wide (“What’s your favourite travel destination in the world?”)
 
